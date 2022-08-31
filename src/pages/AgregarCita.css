@@ -1,0 +1,203 @@
+.contenedorPacientes .contenido{
+    width: 100%;
+    margin: 0 auto;
+}
+
+@media only screen and (min-width: 768px){
+    .contenedorPacientes .contenido{
+        width: 70%;
+        margin: 15px auto;
+    }
+    .nuevaCita form{
+        width: 70%;
+    }
+}
+@media only screen and (min-width: 900px){
+    .contenedorPacientes .contenido{
+        width: 60%;
+        margin: 15px auto;
+    }
+    .nuevaCita form{
+        width: 60%;
+    }
+}
+.contenedorPacientes .contenidoFecha{
+    margin: auto;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 2px var(--grisClaro);
+}
+.contenedorPacientes .contenidoFecha p{
+    color: gray;
+    margin: 0;
+}
+
+.contenedorPacientes .contenidoFecha .fecha{ 
+    color: black;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+.contenedorPacientes .contenidoFecha .btnPaciVicit button{
+    background-color: var(--azulFuerte);
+    margin: 0 0 0 2rem;
+    width: 5.5rem;
+    height: 1.9rem;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.contenedorPacientes .contenidoFecha .btnPaciVicit button:hover{
+    background-color: var(--azulMedio);
+}
+@media only screen and (max-width: 768px){ 
+        
+    .contenedorPacientes .contenidoFecha .btnPaciVicit button{
+        margin: 0 2px;
+        width: 4.4rem;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+}
+.contenedorPacientes .busqueda{
+    width: 95%;
+    margin: 10px auto;
+    border-radius: 15px;
+    border: solid 2px var(--grisClaro);
+    align-items: center;
+    display: flex;
+    border: none;
+    border-radius: 3px;
+    background-color: var(--azulClaro);
+}
+
+.contenedorPacientes .busqueda button{
+    width: 15%;
+    border: none;
+    border-radius: 3px;
+    background-color: var(--azulClaro);
+}
+.contenedorPacientes .busqueda button img{
+    filter: var(--grisImg);
+    width: 25px;
+}
+.contenedorPacientes .busqueda input{
+    text-align: left;
+    border: none;
+    border-radius: 3px;
+    background-color: var(--azulClaro);
+    width: 85%;
+    height: 50px;
+    display: inline-block;
+    margin: 0;
+    border: none;
+}
+.contenedorPacientes .titulo{
+    /* background-color: var(--azulFuerte); */
+    background-image: linear-gradient(135deg, var(--azulFuerte), var(--azulMedio));
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    margin: .5rem auto;
+    color: white;
+    border-radius: 5px;
+}
+.contenedorPacientes .titulo h2{
+    margin: 0;
+    padding: 0;
+}
+.nuevaCita{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+    margin: auto!important;
+    text-align: center;
+}
+.nuevaCita form{
+    width: 100%;
+    padding: 0;
+}
+@media only screen and (min-width: 768px){
+    .nuevaCita form{
+        width: 70%;
+    }
+}
+@media only screen and (min-width: 900px){
+    .nuevaCita form{
+        width: 60%;
+    }
+}
+.nuevaCita input{
+    text-align: left;
+    width: 45%;
+    height: 50px;
+    display: inline-block;
+    margin: 10px 0 0 0;
+    border: none;
+    border-radius: 3px;
+    background-color: var(--azulClaro);
+    /* border-bottom: solid 2px var(--grisClaro); */
+}
+.nuevaCita input:first-of-type{
+    width: 95%;
+}
+.nuevaCita .apM{
+    margin-left: 5%;
+}
+.nuevaCita input:last-of-type{
+    margin-left: 5%;
+}
+
+input{
+    outline: none;
+}
+input:focus{
+    border-color: var(--azulMedio);
+}
+@media only screen and (min-width: 768px){
+    
+    .nuevaCita input:first-of-type{
+        width: 100%;
+    }
+    .nuevaCita input{
+        width: 45%;
+    }
+    .nuevaCita .apM{
+        margin-left: 10%;
+    }
+    .nuevaCita input:last-of-type{
+        margin-left: 10%;
+    }
+}
+.listAgregarP{
+    height: 40vh;
+}
+.nuevaCita button{
+    /* width: 70px;
+    height: 70px;
+    border-radius: 100%;*/
+    border-radius: 5px;
+    margin: 1rem auto 0 auto;
+    width: 95%;
+    height: 2rem;
+    font-size: 1rem;
+    color: white;
+    box-shadow: 0px 3px 7px var(--negroOpaco); 
+    background-color: var(--azulFuerte);
+}
+.nuevaCita button.btnCerrar{
+    margin-bottom: 1rem;
+}
+.nuevaCita button p{
+    margin: 0;
+}
+.nuevaCita button:hover{
+    background-color: var(--azulFuerte);
+}
+.nuevaCita button  img{
+    width: 50%;
+}

@@ -1,0 +1,151 @@
+
+    /*contenedor*/
+    .main{
+        width: 100%;
+        height: 100vh;
+    }
+
+    .container {
+        width: 90%;
+        height: 50vh;
+        margin: 10px auto;
+      }
+    @media only screen and (min-width: 768px){
+
+        .container {
+            width: 60%;
+            height: 50vh;
+            margin: 2% auto;
+          }
+
+    }
+
+      ion-app > ion-router-outlet > div > div.main > div > div.dx-scheduler.dx-widget.dx-visibility-change-handler.dx-scheduler-adaptive > div.dx-scheduler-header.dx-widget{
+        width: 100%!important;
+      }
+      ion-app > ion-router-outlet > div > div.main > div > div.dx-scheduler.dx-widget.dx-visibility-change-handler.dx-scheduler-adaptive{
+        width: 100%!important;
+      }
+
+      /*barra*/
+      div.dx-scheduler.dx-widget.dx-visibility-change-handler.dx-scheduler-adaptive div.dx-scheduler-header.dx-widget {
+        background-color: var(--azulFuerte);
+        border-radius: 8px;
+      }
+  
+      div.dx-scheduler.dx-widget.dx-visibility-change-handler.dx-scheduler-adaptive div.dx-scheduler-header.dx-widget>div {
+        color: white;
+        background-color: var(--azulFuerte);
+        border-radius: 8px;
+      }
+  
+      /*elemtos dia semana mes*/
+      
+      .dx-scheduler-small .dx-scheduler-view-switcher.dx-tabs{
+        display: block;
+      }
+      ion-app > ion-router-outlet > div > div.main > div > div.dx-scheduler.dx-widget.dx-visibility-change-handler.dx-scheduler-adaptive > div.dx-scheduler-header.dx-widget{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;  
+      }
+      .dx-scheduler-navigator{
+        float: none;
+      }
+      .dx-scheduler-view-switcher.dx-tabs{
+        float: none;
+      }
+/*
+@media only screen and (max-width: 500px){
+  ion-app > ion-router-outlet > div > div.main > div > div.dx-scheduler.dx-widget.dx-visibility-change-handler.dx-scheduler-adaptive > div.dx-scheduler-header.dx-widget{
+    display: block;  
+    justify-content: center;
+  }
+  ion-app > ion-router-outlet > div > div.main > div > div.dx-scheduler.dx-widget.dx-visibility-change-handler.dx-scheduler-small.dx-scheduler-adaptive > div.dx-scheduler-header.dx-widget > div.dx-scheduler-navigator.dx-widget{
+    background-color: none;
+    width: 100%;
+  }
+  
+  ion-app > ion-router-outlet > div > div.main > div > div.dx-scheduler.dx-widget.dx-visibility-change-handler.dx-scheduler-small.dx-scheduler-adaptive > div.dx-scheduler-header.dx-widget > div{
+    background-color: none;
+    width: 100%;
+  }
+  ion-app > ion-router-outlet > div > div.main > div > div.dx-scheduler.dx-widget.dx-visibility-change-handler.dx-scheduler-small.dx-scheduler-adaptive > div.dx-scheduler-header.dx-widget{
+    width: 100%;
+  }
+  .dx-scheduler-navigator{
+    display: inline-block;
+    width: 100%;
+    max-width: none;
+  }
+  div.dx-scheduler.dx-widget.dx-visibility-change-handler.dx-scheduler-adaptive div.dx-scheduler-header.dx-widget>div{
+    display: block;
+    width: 100%;
+    margin: 0;
+  }
+  .dx-scheduler-view-switcher.dx-tabs{
+    display: block;
+    width: 100%;
+    max-width: none;
+  }
+}
+*/
+      .dx-scheduler-view-switcher.dx-tabs .dx-tab.dx-tab-selected,
+      .dx-scheduler-view-switcher.dx-tabs .dx-tab.dx-tab-selected::after {
+        border: none;
+      }
+  
+      @media only screen and (max-width: 768px) {
+        div.dx-scheduler.dx-widget.dx-visibility-change-handler.dx-scheduler-adaptive>div.dx-scheduler-header.dx-widget>div.dx-scheduler-view-switcher.dx-tabs.dx-widget.dx-visibility-change-handler.dx-collection.dx-tabs-stretched.dx-tabs-expanded {
+          width: 33%;
+        }
+      }
+  
+      .dx-scheduler-view-switcher.dx-tabs .dx-tab.dx-tab-selected,
+      .dx-scheduler-view-switcher.dx-tabs .dx-tab.dx-tab-selected {
+        background-color: var(--azulMedio);
+        color: rgb(255, 255, 255);
+        border-radius: 8px;
+      }
+  
+      .dx-scheduler-view-switcher.dx-tabs .dx-tab.dx-tab-selected,
+      .dx-scheduler-view-switcher.dx-tabs .dx-tab.dx-state-hover {
+        background-color: var(--azulMedio);
+        color: rgb(255, 255, 255);
+        border-radius: 8px;
+      }
+  
+      .dx-scheduler-appointment {
+        border-radius: 8px;
+      }
+  
+      /*button */
+/*      ion-app > ion-router-outlet > div > div.main > div > div.dx-scheduler.dx-widget.dx-visibility-change-handler.dx-scheduler-adaptive > div.dx-scheduler-header.dx-widget > div.dx-scheduler-view-switcher.dx-dropdownmenu.dx-dropdownmenu-button.dx-button.dx-button-normal.dx-button-mode-contained.dx-widget.dx-button-has-icon{
+        display: none;
+      }
+      ion-app > ion-router-outlet > div > div.main > div > div.dx-scheduler.dx-widget.dx-visibility-change-handler.dx-scheduler-adaptive > div.dx-scheduler-header.dx-widget > div.dx-scheduler-view-switcher-label{
+        display: none;
+      }
+      */
+      /*dia del mes actual*/
+      .dx-scheduler-date-table-current-date {
+        color: var(--azulMedio) !important;
+      }
+  
+      /*citas del dia del mes*/
+      .dx-popup-wrapper.dx-scheduler-appointment-tooltip-wrapper .dx-tooltip-appointment-item .dx-tooltip-appointment-item-content .dx-tooltip-appointment-item-content-subject,
+      .dx-scheduler-overlay-panel .dx-tooltip-appointment-item .dx-tooltip-appointment-item-content .dx-tooltip-appointment-item-content-subject {
+        text-align: center;
+        color: var(--azulMuyFuerte);
+      }
+  
+      .dx-popup-wrapper.dx-scheduler-appointment-tooltip-wrapper .dx-tooltip-appointment-item .dx-tooltip-appointment-item-content .dx-tooltip-appointment-item-content-date,
+      .dx-scheduler-overlay-panel .dx-tooltip-appointment-item .dx-tooltip-appointment-item-content .dx-tooltip-appointment-item-content-date {
+        text-align: center;
+        color: var(--negroOpaco);
+      }
+  
+      /*boton barra*/
+      .dx-button-mode-contained .dx-icon {
+        color: rgb(5, 5, 5);
+      }

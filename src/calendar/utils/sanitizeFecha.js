@@ -1,0 +1,1 @@
+export const sanitizeFecha = fecha => fecha.toISOString().split('T')[0]

@@ -1,0 +1,212 @@
+.miAgenda{
+    width: 100%;
+    background-color: white;
+    height: 82vh;
+}
+.miAgenda .contenido{
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+
+@media only screen and (min-width: 768px){
+    .miAgenda .contenido{
+        width: 70%;
+        text-align: start;
+    }
+}
+@media only screen and (min-width: 900px){
+    .miAgenda .contenido{
+        width: 60%;
+        text-align: start;
+    }
+}
+.miAgenda .contenido .head{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 5rem;
+}
+.miAgenda .contenido h1{
+    color: var(--azulFuerte);
+    font-weight: bold;
+}
+.miAgenda .contenido .agregar{
+    position: absolute;
+    margin-top: 1rem;
+    top: 0;
+    right: 0;
+}
+.miAgenda .contenido .agregar button img{
+    width: 30px;
+    filter: var(--azulFuerteImg);
+}
+.miAgenda .contenido .agregar p{
+    margin: 0;
+    color: var(--azulMedio);
+}
+/*Informe*/
+.miAgenda .contenido .informe{
+    background: linear-gradient(45deg,var(--azulFuerte),var(--azulClaro) 200%);
+    padding: 5px;
+    border-radius: 8px;
+    color: white;
+} 
+
+.miAgenda .contenido .informe .dia{
+    width: 100%;
+    text-align: start;
+}
+.miAgenda .contenido .informe .dia p{
+    font-size: 1.3rem;
+    margin: 1rem 0 0 1rem;
+}
+.miAgenda .contenido .informe .noticia{
+    width: 100%;
+    text-align: start;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.miAgenda .contenido .informe .noticia .cambiar{
+    border: solid 2px white;
+    padding: 7px;
+    margin-left: 10px;
+    border-radius: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--azulMedio);
+    width: 2.5rem;
+}
+.miAgenda .contenido .informe .noticia .cambiar img{
+    width: 1.2rem;
+    filter: var(--blancoImg);
+}
+@media only screen and (min-width: 768px){
+    .miAgenda .contenido .informe .dia p{
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin: .5rem 0 0 0;
+    }
+    .miAgenda .contenido .informe .noticia{
+        width: 50%;
+        min-width: 400px;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    .miAgenda .contenido .informe .dia{
+        text-align: center;
+    }
+}
+.miAgenda .contenido .informe .noticia p:first-child{
+    font-size: 80px;
+    font-weight: bold;
+    margin: 0 1rem 0 0;
+}
+.miAgenda .contenido .informe .noticia p:last-child{
+    font-size: 80px;
+    font-weight: bold;
+    width: 150px;
+}
+/*consultorios*/
+@media only screen and (max-width:768px){
+    .miAgenda .contenido .bloque{
+    height: calc(100vh - 29rem);
+    overflow-y: scroll;
+    margin-top: 5px;
+    }
+    
+}
+.miAgenda .contenido .bloque::-webkit-scrollbar {
+    display: none;
+}
+.miAgenda .contenido a{
+    text-decoration: none;
+    color: var(--negroOpaco);
+    cursor: pointer;
+}
+.miAgenda .contenido a:hover .consultorio{
+    background-color: var(--azulFuerte);
+    color: white;
+}
+.miAgenda .contenido a:hover .consultorio img{
+/*    filter: var(--blancoImg);*/
+}
+.miAgenda .contenido .consultorio{
+    width: 100%;
+    height: 3.5rem;
+    background-color: var(--azulClaro);
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    text-align: center;
+}
+.miAgenda .contenido .consultorio img:first-child{
+    height: 80%;
+}
+.miAgenda .contenido .consultorio img:last-child{
+    width: 1.2rem;
+}
+.miAgenda .contenido .consultorio p{
+    width: 50%;
+    font-size: 1rem;
+}
+.miAgenda .contenido .consultorio div{
+    background-color: red;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+@media only screen and (min-width: 768px){
+    .miAgenda .contenido .consultorio{
+        margin-top: 1.5rem;
+        height: 3.5rem;
+    }
+}
+ion-item{    
+    --width: 10px;
+    --padding: 0;
+    --margin: 0;
+    --background: var(--ion-item-background, var(--ion-background-color, var(--azulFuerte)));
+    --border: none;
+    --border-width: 0 0 0 0;
+    --color: rgba(255, 255, 255, 0);
+}
+ion-item p{
+    color: white;
+}
+ion-app > ion-router-outlet > div > ion-content > div > div.miAgenda > div > div.informe > div.noticia > ion-item{
+    --background: transparent;
+}
+ion-app > ion-router-outlet > div > ion-content > div > div.miAgenda > div > div.informe > div.noticia > ion-item > ion-datetime{
+    padding: 0;
+    margin: 0;
+    width: 0;
+    height: 0;
+}
+.clima-container{
+    position: relative;
+}
+.clima-info{
+    position: relative;
+    z-index: 1;
+}
+.img-clima{
+    position: absolute;
+    z-index: 0;
+    top: -5.3rem;
+    right: 0px;
+    max-width: 10rem;
+}

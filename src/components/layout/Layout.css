@@ -1,0 +1,221 @@
+.pantalla {
+    background-color: white;
+    min-height: 100vh;
+    color: var(--negroOpaco);
+    text-transform: capitalize;
+}
+
+input {
+    background-color: white;
+}
+
+button {
+    background-color: white;
+}
+
+.headerPacientes {
+    background-color: var(--azulFuerte);
+    width: 100%;
+    text-align: center;
+    padding-bottom: 1px;
+    padding-top: 10px;
+    box-shadow: 0px 1px 15px 1px rgba(0, 0, 0, 0.473);
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+}
+
+.headerPacientes .logo {
+    width: 30%;
+    margin: 0 auto;
+}
+
+.headerPacientes .barHeader {
+    display: none;
+}
+
+.barHeader a {
+    text-align: center;
+    margin: 0 15px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.barHeader a img {
+    width: 2.2rem;
+    height: 2.2rem;
+    margin: 0 auto;
+}
+
+.headerPacientes a.centro {
+    text-decoration: none;
+}
+
+.headerPacientes .centro p {
+    font-size: .7rem;
+    font-weight: 100;
+    color: white;
+}
+
+.barHeader a p {
+    color: rgb(255, 255, 255);
+    margin: 0 auto;
+    font-size: .8rem;
+}
+
+@media only screen and (min-width: 600px) {
+    .headerPacientes .logo {
+        width: 26%;
+    }
+}
+.headerPacientes .usuario {
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 100px;
+    background-image: url(../../assets/img/woman-gfec6923be_640.jpg);
+    display: inline-block;
+    background-size: cover;
+    position: absolute;
+    margin: 0;
+    top: .5rem;
+    right: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+    .headerPacientes .logo {
+        width: 150px;
+        margin: 0 auto;
+    }
+    .headerPacientes .centro p {
+        display: none;
+    }
+    .headerPacientes .barHeader {
+        display: block;
+        width: 50%;
+    }
+    .headerPacientes .userImage {
+        display: inline-block;
+        position: absolute;
+        margin: 0;
+        top: 20px;
+        right: 20px;
+    }
+    .headerPacientes .usuario {
+        position: absolute;
+        top: 15px;
+    }
+}
+
+
+.headerPacientes p {
+    margin: 0 auto 10px auto;
+}
+
+.bar {
+    width: 100%;
+    height: 5rem;
+    background-color: var(--azulClaro);
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.bar a {
+    text-align: center;
+    width: 3.6rem;
+    height: 3.5rem;
+    margin: 10px 5%;
+    text-decoration: none;
+}
+
+.bar a:hover img, .bar a:hover p, .marcaIcono {
+    color: var(--azulMedio);
+    filter: var(--azulMedioImg);
+}
+
+.bar a img {
+    width: 2.2rem;
+    height: 2.2rem;
+    margin: 0 auto;
+    filter: var(--negroOpacoImg);
+}
+
+.bar a p {
+    color: var(--negroOpaco);
+    margin: 0 auto;
+    font-size: .8rem;
+}
+
+@media only screen and (min-width: 768px) {
+    .bar {
+        display: none;
+    }
+}
+
+form {
+    padding-right: 5px;
+}
+
+form::-webkit-scrollbar, 
+.listaPT::-webkit-scrollbar, 
+/* .rbc-time-content::-webkit-scrollbar,  */
+.contenedorSemana .contenedorHoras::-webkit-scrollbar{
+    width: 5px;
+    border-radius: 5px;
+}
+/* 
+form::-webkit-scrollbar-thumb {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    -webkit-animation: gradient 15s ease infinite;
+    animation: gradient 15s ease infinite;
+    border-radius: 5px;
+} */
+
+form::-webkit-scrollbar-thumb, 
+.listaPT::-webkit-scrollbar-thumb, 
+/* .rbc-time-content::-webkit-scrollbar-thumb,   */
+.contenedorSemana .contenedorHoras::-webkit-scrollbar-thumb {
+    background: rgb(225,254,255);
+    background: linear-gradient(180deg, rgba(225,254,255,1) 0%, var(--azulFuerte) 54%, rgba(225,254,255,1) 100%);
+    border-radius: 5px;
+    
+}
+form input{
+    padding-left: 5px!important;
+}
+
+.obligatorio::placeholder{
+    color: red!important;
+}
+.obligatorio{
+padding-left: 10px!important;
+}
+
+/* 
+@-webkit-keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+} */

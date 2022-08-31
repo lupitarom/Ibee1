@@ -1,0 +1,8 @@
+.contedorPaciente{
+    width: 100%;
+    background-color: black;
+}
+
+.contedorPaciente .fotoPacienteU{
+    width: 30px;
+}

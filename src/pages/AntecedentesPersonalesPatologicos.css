@@ -1,0 +1,107 @@
+.contenedorAntecedentesPersonalesP {
+    width: 90%;
+    margin: 0 auto;
+}
+
+@media only screen and (min-width: 768px) {
+    .contenedorAntecedentesPersonalesP {
+        width: 70%;
+        max-width: 768px;
+        margin: 0 auto;
+        height: calc(100% - 5rem);
+    }
+}
+.contenedorAntecedentesPersonalesP h1{
+    color: var(--azulFuerte);
+    font-weight: bold;
+}
+.contenedorAntecedentesPersonalesP form{
+    width: 100%;
+    height: calc(100% - 11.3rem);
+    overflow-y: scroll;
+    text-align: start;
+}
+.contenedorAntecedentesPersonalesP form .bloque {
+    width: 100%;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 5px;
+}
+
+.contenedorAntecedentesPersonalesP form .bloque label {
+    background-color: var(--azulClaro);
+    padding: 10px 5px;
+    border-radius: 7px;
+    font-size: .9rem;
+}
+.contenedorAntecedentesPersonalesP form .bloque div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.contenedorAntecedentesPersonalesP form .bloque div button{
+    background-color: var(--azulClaro);
+    width: 48%;
+    height: 100%;
+    border-radius: 7px;
+    color: var(--negroOpaco);
+}
+.contenedorAntecedentesPersonalesP form .bloque div button:hover{
+    background-color: var(--azulFuerte);
+    color: white;
+}
+.contenedorAntecedentesPersonalesP form .limpiar{
+    width: 100%;
+    margin-top: 5px;
+    background-color: var(--azulClaro);
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+}
+.contenedorAntecedentesPersonalesP form .limpiar button{
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-right: 5px;
+    font-size: .9rem;
+    display: flex;
+    border-radius: 100px;
+    color: white;
+    background-color: var(--negroOpaco);
+}
+.contenedorAntecedentesPersonalesP form .limpiar input{
+    height: 2.5rem;
+    margin: 0;
+    padding-left: 5px;
+    width: 100%;
+    background-color: var(--azulClaro);
+    border: none;
+    border-radius: 7px;
+}
+.contenedorAntecedentesPersonalesP form textarea{
+    width: 100%;
+    display: flex;
+    height: auto;
+    margin-top: 5px;
+    background-color: var(--azulClaro);
+    border: none;
+    border-radius: 7px;
+    resize: none;
+    padding: 5px 10px;
+}
+.contenedorAntecedentesPersonalesP form .btnGuardar{
+    width: 100%;
+    text-align: center;
+    margin-top: 5px;
+    padding-bottom: 5px;
+}
+.contenedorAntecedentesPersonalesP form .btnGuardar button{
+    background-color: var(--azulFuerte);
+    width: 50%;
+    height: 2.5rem;
+    color: white;
+    border-radius: 7px;
+}
+.obligatorio::placeholder{
+    color: red!important;
+}

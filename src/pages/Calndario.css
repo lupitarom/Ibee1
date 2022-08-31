@@ -1,0 +1,346 @@
+.contenedorCalndario {
+    width: 95%;
+    margin: 1rem auto 0 auto;
+    color: var(--azulMuyFuerte);
+}
+
+@media only screen and (min-width: 768px) {
+    .contenedorCalndario {
+        width: 70%;
+        /* max-width: 768px; */
+    }
+}
+
+.rbc-today {
+    background-image: radial-gradient(var(--azulMuyClaro), var(--azulClaro));
+    border-radius: 7px;
+}
+
+.contenedorCalndario .rbc-show-more {
+    color: var(--azulMedio);
+    text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .rbc-row-segment .rbc-event-content {
+        font-size: .9rem;
+    }
+}
+
+.contenedorCalndario .rbc-month-view .rbc-row.rbc-month-header span {
+    color: var(--azulFuerte);
+}
+
+.rbc-toolbar {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: .5rem;
+}
+
+.rbc-toolbar-label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+@media only screen and (min-width: 768px) {
+    .rbc-toolbar {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.rbc-btn-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.rbc-time-header.rbc-overflowing {
+    margin: 0;
+}
+
+.rbc-time-content::-webkit-scrollbar {
+    border-radius: 5px;
+    width: auto;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .rbc-time-content::-webkit-scrollbar {
+        border-radius: 5px;
+        width: 2px;
+    }
+}
+
+/* 
+form::-webkit-scrollbar-thumb {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    -webkit-animation: gradient 15s ease infinite;
+    animation: gradient 15s ease infinite;
+    border-radius: 5px;
+} */
+
+.rbc-time-content::-webkit-scrollbar-thumb {
+    background: rgb(225, 254, 255);
+    background: linear-gradient(180deg, rgba(225, 254, 255, 1) 0%, var(--azulFuerte) 54%, rgba(225, 254, 255, 1) 100%);
+    border-radius: 5px;
+}
+
+.rbc-day-slot .rbc-event, .rbc-day-slot .rbc-background-event {
+    border: 1px solid var(--azulFuerte);
+}
+
+.rbc-time-view {
+    border-radius: 7px;
+}
+
+.rbc-btn-group button {
+    color: var(--azulFuerte);
+}
+
+.rbc-toolbar button:active, .rbc-toolbar button.rbc-active, .rbc-btn-group button:hover {
+    color: var(--azulFuerte);
+    background-color: var(--azulMuyClaro);
+}
+
+
+.contenedorCalndario span button {
+    visibility: hidden !important;
+    text-align: center;
+    padding: 0;
+}
+
+.contenedorCalndario .rbc-month-view .rbc-row.rbc-month-header span {
+    visibility: hidden !important;
+    text-align: center;
+    padding: 0;
+}
+
+@media only screen and (min-width: 768px) {
+
+    .contenedorCalndario .rbc-month-view .rbc-row.rbc-month-header div span::before {
+        font: .7rem;
+    }
+}
+
+/*Botones de contral*/
+.contenedorCalndario span:nth-child(1) button:nth-child(1)::before {
+    content: "Hoy";
+    width: 100%;
+    padding: 0;
+    height: 2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    background-color: var(--azulClaro);
+    text-align: center;
+    visibility: visible !important;
+}
+
+.contenedorCalndario span:nth-child(1) button:nth-child(2)::before {
+    content: "Atras";
+    width: 100%;
+    padding: 0;
+    height: 2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    background-color: var(--azulClaro);
+    text-align: center;
+    visibility: visible !important;
+}
+
+.contenedorCalndario span:nth-child(1) button:nth-child(3)::before {
+    content: "Siguiente";
+    width: 100%;
+    padding: 0;
+    height: 2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    background-color: var(--azulClaro);
+    text-align: center;
+    visibility: visible !important;
+}
+
+/* mes semana dia agenda */
+.contenedorCalndario span:nth-child(3) button:nth-child(1)::before {
+    content: "Mes";
+    width: 100%;
+    padding: 0;
+    height: 2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    background-color: var(--azulClaro);
+    text-align: center;
+    visibility: visible !important;
+}
+
+.contenedorCalndario span:nth-child(3) button:nth-child(2)::before {
+    content: "Semana";
+    width: 100%;
+    padding: 0;
+    height: 2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    background-color: var(--azulClaro);
+    text-align: center;
+    visibility: visible !important;
+}
+
+.contenedorCalndario span:nth-child(3) button:nth-child(3)::before {
+    content: "Día";
+    width: 100%;
+    padding: 0;
+    height: 2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    background-color: var(--azulClaro);
+    text-align: center;
+    visibility: visible !important;
+}
+
+.contenedorCalndario span:nth-child(3) button:nth-child(4)::before {
+    content: "Agenda";
+    width: 100%;
+    padding: 0;
+    height: 2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    background-color: var(--azulClaro);
+    text-align: center;
+    visibility: visible !important;
+}
+
+.contenedorCalndario span button::before:hover {
+    background-color: var(--azulMedio);
+}
+
+/**/
+.contenedorCalndario .rbc-month-view .rbc-row.rbc-month-header div:nth-child(1) span::before {
+    content: "Domingo";
+    visibility: visible;
+    height: 1.5rem;
+    width: 100%;
+    font-size: .75rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedorCalndario .rbc-month-view .rbc-row.rbc-month-header div:nth-child(2) span::before {
+    content: "Lunes";
+    visibility: visible;
+    height: 1.5rem;
+    width: 100%;
+    font-size: .8rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedorCalndario .rbc-month-view .rbc-row.rbc-month-header div:nth-child(3) span::before {
+    content: "Martes";
+    visibility: visible;
+    height: 1.5rem;
+    width: 100%;
+    font-size: .8rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedorCalndario .rbc-month-view .rbc-row.rbc-month-header div:nth-child(4) span::before {
+    content: "Miercoles";
+    visibility: visible;
+    height: 1.5rem;
+    width: 100%;
+    font-size: .75rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedorCalndario .rbc-month-view .rbc-row.rbc-month-header div:nth-child(5) span::before {
+    content: "Jueves";
+    visibility: visible;
+    height: 1.5rem;
+    width: 100%;
+    font-size: .8rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedorCalndario .rbc-month-view .rbc-row.rbc-month-header div:nth-child(6) span::before {
+    content: "Viernes";
+    visibility: visible;
+    height: 1.5rem;
+    width: 100%;
+    font-size: .8rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedorCalndario .rbc-month-view .rbc-row.rbc-month-header div:nth-child(7) span::before {
+    content: "Sabado";
+    visibility: visible;
+    height: 1.5rem;
+    width: 100%;
+    font-size: .8rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hydrated {
+    visibility: inherit;
+}
+
+/* .sc-ion-modal-ios-h:first-of-type{
+    
+} */
+@media only screen and (max-width: 768px) {
+
+    /* 
+    .sc-ion-modal-ios-h{
+        border-radius: 7px;
+    }
+    
+    .modal-wrapper.sc-ion-modal-md{
+
+    } */
+    .sc-ion-modal-ios-h {
+        width: 95%;
+        height: 70%;
+        margin: auto auto;
+        border: rgba(6, 202, 216, 0.178) solid 5px;
+        border-radius: 7px;
+        /* border-top: solid 4.5rem rgba(0, 0, 0, 0.4);
+        border-bottom: solid 4.5rem rgba(0, 0, 0, 0.4);
+        border-left: solid 1rem rgba(0, 0, 0, 0.4);
+        border-right: solid 1rem rgba(0, 0, 0, 0.4); */
+        width: 90%;
+        height: 80%;
+        margin: auto;
+    }
+
+    .hydrated {
+        visibility: inherit;
+    }
+}

@@ -1,0 +1,73 @@
+
+.contenedorCitas{
+    width: 90%;
+    margin: 0 auto;
+    height: calc(100% - 5.2rem);
+    margin: auto;
+}
+@media only screen and (min-width: 768px){
+    .contenedorCitas{
+        width: 70%;
+        max-width: 768px;
+    }
+}
+.contenedorCitas h1{
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--azulFuerte);
+}
+.contenedorCitas h3{
+    text-align: end;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--azulFuerte);
+}
+.contenidoCitas{
+    width: 100%;
+    height: calc(100vh - 13.6rem);
+    overflow-y: scroll;
+}
+.contenidoCitas::-webkit-scrollbar {
+    display: none;
+}
+.espacios{
+    display: flex;
+    justify-content: space-between;
+}
+
+.indicador-hora{
+    width: 30%;
+    margin-top: 10px;
+    padding: 0 5px;
+    color: gray;
+    font-size: .92rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.espacio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 3rem;
+    margin-top: 10px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 3px;
+    background-color: var(--azulClaro);
+}
+.espacio:hover{
+    background: var(--azulClaro);
+}
+
+.cita{
+    text-align: center;
+    background: var(--azulFuerte);
+    color: white;
+}
+
+.cita:hover{
+    background: var(--azulFuerte);
+}

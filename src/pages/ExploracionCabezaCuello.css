@@ -1,0 +1,91 @@
+.contenedorExploracionCabezaCuello{
+    width: 90%;
+    margin: 0 auto;
+    height: calc(100% - 7rem);
+}
+@media only screen and (min-width: 768px){
+    .contenedorExploracionCabezaCuello{
+        width: 70%;
+        max-width: 768px;
+        margin: 0 auto;
+        height: calc(100% - 5rem);
+    }   
+}
+.contenedorExploracionCabezaCuello h1{
+    color: var(--azulFuerte);
+    font-weight: bold;
+    text-align: start;
+}
+.contenedorExploracionCabezaCuello label{
+    text-align: start;
+    width: 100%;
+    display: block;
+}
+.contenedorExploracionCabezaCuello form p{
+    background-color: var(--azulClaro);
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-bottom: 10px;
+    width: 100%;
+    min-height: 2.5rem;
+    padding: 4px;
+    border-radius: 7px;
+}
+.contenedorExploracionCabezaCuello form p:last-of-type{
+    width: 100%;
+}
+.contenedorExploracionCabezaCuello form{
+    width: 100%;
+    height: calc(100% - 5rem);
+    overflow-y: scroll;
+}
+.contenedorExploracionCabezaCuello form .bloque{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+.contenedorExploracionCabezaCuello form .bloque div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.contenedorExploracionCabezaCuello form .bloque div label{
+    margin-left: 15px;
+}
+.contenedorExploracionCabezaCuello form .bloque div input{
+    margin-right: 10px;
+}
+.contenedorExploracionCabezaCuello form .bloque button{
+    background-color: var(--azulClaro);
+    color: var(--negroOpaco);
+    min-height: 2.5rem;
+    border-radius: 7px;
+    font-size: 1rem;
+}
+.contenedorExploracionCabezaCuello form .bloque button:hover{
+    background-color: var(--azulFuerte);
+    color: white;
+}
+.contenedorExploracionCabezaCuello form textarea{
+    margin-top: 10px;
+    background-color: var(--azulClaro);
+    border: none;
+    width: 100%;
+    height: 100px;
+    border-radius: 7px;
+    resize: none;
+}
+.contenedorExploracionCabezaCuello form .btnGuardar{
+    width: 100%;
+    text-align: center;
+    margin: 5px auto;
+}
+.contenedorExploracionCabezaCuello form .btnGuardar button{
+    background-color: var(--azulFuerte);
+    width: 50%;
+    height: 2.5rem;
+    border-radius: 7px;
+    color: white;
+}

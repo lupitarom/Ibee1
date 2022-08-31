@@ -1,0 +1,77 @@
+.contenedorAntecedentesP{
+    width: 90%;
+    margin: 0 auto;
+    height: calc(100% - 5.5rem);
+}
+@media only screen and (min-width: 768px){
+    .contenedorAntecedentesP{
+        width: 70%;
+        max-width: 768px;
+        margin: 0 auto;
+        height: calc(100% - 5rem);
+    }   
+}
+.contenedorAntecedentesP h1{
+    color: var(--azulFuerte);
+    font-weight: bold;
+}
+.contenedorAntecedentesP form{
+    width: 100%;
+    height: calc(100% - 6rem);
+    overflow-y: scroll;
+}
+.contenedorAntecedentesP form label{
+    display: block;
+    font-size: 1rem;
+    margin-left: 5px;
+    color: var(--negroOpaco);
+}
+.contenedorAntecedentesP form .limpiar{
+    width: 100%;
+    margin-top: 10px;
+    background-color: var(--azulClaro);
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+}
+.contenedorAntecedentesP form .limpiar button{
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-right: 5px;
+    font-size: .9rem;
+    display: flex;
+    border-radius: 100px;
+    color: white;
+    background-color: var(--negroOpaco);
+}
+.contenedorAntecedentesP form .limpiar input{
+    min-height: 2.5rem;
+    margin: 0;
+    padding-left: 10px;
+}
+.contenedorAntecedentesP form input{
+    width: 100%;
+    height: 2.5rem;
+    margin: 10px 0 0 0;
+    border: none;
+    border-radius: 7px;
+    padding-left: 10px!important;
+    background-color: var(--azulClaro);
+}
+.contenedorAntecedentesP form .btnGuardar{
+    width: 100%;
+    text-align: center;
+    margin-top: 5px;
+    padding-bottom: 5px;
+}
+.contenedorAntecedentesP form .btnGuardar button{
+    background-color: var(--azulFuerte);
+    width: 50%;
+    height: 2.5rem;
+    color: white;
+    border-radius: 7px;
+}
+
+.bg-blue{
+    background-color: var(--azulFuerte);
+}

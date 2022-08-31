@@ -1,0 +1,216 @@
+.contenedorPagos {
+    width: 70%;
+    margin: 1rem auto 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+@media only screen and (max-width: 768px) {
+    .contenedorPagos {
+        width: 90%;
+        grid-template-columns: 1fr;
+    }
+}
+
+.infoPersonal .imagen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.infoPersonal img {
+    width: 9rem;
+    height: 9rem;
+    border-radius: 100%;
+}
+
+.infoPersonal .datos {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 10px 20px;
+    background-color: rgb(235, 244, 247);
+    border-radius: 7px;
+}
+
+.infoEconomica .datosMovil {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .infoPersonal .datos {
+        display: none;
+    }
+
+    .infoEconomica .datosMovil {
+        display: block;
+        width: 100%;
+        margin-top: 1rem;
+        padding: 10px 20px;
+        background-color: rgb(235, 244, 247);
+        border-radius: 7px;
+    }
+}
+
+.infoPersonal .datos p, .infoEconomica .datosMovil p {
+    width: 100%;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.infoPersonal .datos p label:last-of-type, .infoEconomica .datosMovil p:last-ch {
+    font-weight: bold;
+}
+
+.infoEconomica {
+    padding: 5px;
+    width: 100%;
+    height: 85vh;
+    overflow-y: scroll;
+}
+
+.infoEconomica::-webkit-scrollbar{
+    width: 5px;
+    border-radius: 5px;
+}
+/* 
+form::-webkit-scrollbar-thumb {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    -webkit-animation: gradient 15s ease infinite;
+    animation: gradient 15s ease infinite;
+    border-radius: 5px;
+} */
+
+.infoEconomica::-webkit-scrollbar-thumb {
+    background: rgb(225,254,255);
+    background: linear-gradient(180deg, rgba(225,254,255,1) 0%, var(--azulFuerte) 54%, rgba(225,254,255,1) 100%);
+    border-radius: 5px;
+    
+}
+.contenedorPagos .infoEconomica .menu {
+    width: 100%;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+@media only screen and (max-width: 768px) {
+    .infoEconomica .menu {
+        padding: 0;
+        margin-top: 5px;
+        justify-content: space-between;
+    }
+}
+
+.infoEconomica .menu button {
+    background-color: var(--azulFuerte);
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 7px;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
+
+.infoEconomica .menu input {
+    border: none;
+    width: 75%;
+    border-bottom: solid 3px var(--azulClaro);
+}
+
+.infoEconomica .menu button:last-child {
+    background-color: white;
+}
+
+.contenedorPagos .infoEconomica .tabla {
+    background-color: var(--azulClaro);
+    border-radius: 7px 7px 0 0;
+    margin: 0;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.contenedorPagos .infoEconomica .tabla p,
+.infoEconomica .tabla a {
+    padding: 10px 0 0 10px;
+    margin: 0;
+}
+
+.contenedorPagos .infoEconomica .tabla table {
+    background-color: white;
+    border: solid 1px var(--azulClaro);
+    max-height: 30vh;
+    width: calc(80vw - 35vw);
+    overflow-x: scroll;
+    margin: 0 auto;
+    display: inline-block;
+    overflow-y: scroll;
+}
+
+.contenedorPagos .infoEconomica .tabla table tr:last-of-type {
+    border-bottom: solid 2px var(--azulClaro);
+}
+
+.contenedorPagos .infoEconomica .tabla table tr th {
+    text-align: start;
+}
+
+.contenedorPagos .infoEconomica .tabla table tr {
+    border-bottom: solid 1px var(--azulClaro);
+}
+
+@media only screen and (max-width: 768px) {
+    .contenedorPagos .infoEconomica .tabla table {
+        width: calc(90vw - 15px);
+        overflow-x: scroll;
+        display: inline-block;
+    }
+
+    .contenedorPagos .infoEconomica .tabla table tr {
+        width: 768px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        border-bottom: solid 1px var(--azulClaro);
+    }
+}
+
+.contenedorPagos .infoEconomica .tabla table::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    border-radius: 5px;
+}
+
+/* 
+form::-webkit-scrollbar-thumb {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    -webkit-animation: gradient 15s ease infinite;
+    animation: gradient 15s ease infinite;
+    border-radius: 5px;
+} */
+
+.contenedorPagos .infoEconomica .tabla table::-webkit-scrollbar-thumb {
+    background: rgb(225, 254, 255);
+    background: linear-gradient(180deg, rgba(225, 254, 255, 1) 0%, var(--azulFuerte) 54%, rgba(225, 254, 255, 1) 100%);
+    border-radius: 5px;
+
+}
+
+.contenedorPagos input {
+    width: 30%;
+}
+
+.btn-guardar {
+    padding: 5px;
+    background-color: var(--azulFuerte);
+}
+
+.btn-cancelar {
+    padding: 5px;
+    background-color: crimson;
+}
+.button-native{
+    background-color: var(--azulFuerte);
+}

@@ -1,0 +1,76 @@
+.contedorPaciente{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 5.1rem;
+    height: calc(100% - 5.6rem);
+}
+
+.contedorPaciente .img{
+    border-radius: 100%;
+    width: 12rem;
+    height: 12rem;
+    background-color: tomato;
+    margin: 30px auto 0 auto;
+    /* background-image: url("https://dentalesthetics.mx/Ibee/view/pacientes/foto/foto_1459.png"); */
+    background-size: cover;
+    /* background-attachment: fixed; */
+    background-position: center;
+}
+@media only screen and (min-width: 768px){
+    .contedorPaciente img.fotoPacienteU{
+        width: 200px;
+        margin: 30px auto 0 auto;
+    }
+}
+
+.contedorPaciente p{
+    color: var(--azulFuerte);
+    font-size: 1.4rem;
+    text-transform: capitalize;
+}
+.contedorPaciente a{
+    width: 90%;
+    height: 3.5rem;
+    border-radius: 7px;
+    background-color: var(--azulClaro);
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    margin: 1rem auto 0 auto;
+    align-items: center;
+}
+.contedorPaciente a div{
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    border-radius: 7px;
+}
+.contedorPaciente a:hover{
+    color: white;
+    background-color: var(--azulFuerte);
+}
+.contedorPaciente a:hover img{
+    filter: var(--blancoImg);
+}
+.contedorPaciente a:hover p{
+    color: white;
+}
+@media only screen and (min-width: 768px){
+    .contedorPaciente a{
+        width: 60%
+    }
+}
+.contedorPaciente a div p{
+    color: var(--negroOpaco);
+    font-size: 1rem;
+}
+.contedorPaciente a img{
+    height: 35%;
+    margin-right: 1rem;
+}
+.contedorPaciente a div img{
+    height: auto;
+    width: 2.4rem;
+    margin: auto 20px;
+}

@@ -1,0 +1,75 @@
+.contenedorHistorial{
+    width: 100%;
+    height: calc(100% - 5.5rem);
+}
+.contenedorHistorial .titulo{
+    width: 90%;
+    margin: 1.5rem auto 0 auto;
+    text-align: center;
+    color: var(--azulFuerte);
+}
+.contenedorHistorial .titulo img{
+    width: 4.5rem;
+    height: 3.2rem;
+    filter: var(--azulFuerteImg);
+}
+.contenedorHistorial .titulo h1{
+    margin: 10px;
+    font-weight: bold;
+}
+.contenedorHistorial .campos{
+    width: 90%;
+    margin: 0 auto;
+    overflow-y: scroll;
+    height: calc(100vh - 18rem);
+    
+}
+.contenedorHistorial .campos::-webkit-scrollbar {
+    display: none;
+}
+.contenedorHistorial .campos a{
+    text-decoration: none;
+}
+.contenedorHistorial .campos a{
+    background-color: var(--azulClaro);
+    width: 100%;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 8px;
+    color: var(--negroOpaco);
+    margin: 10px auto 0 auto;
+}
+.contenedorHistorial .campos a div{
+    display: flex;
+}
+.contenedorHistorial .campos a p{
+    display: inline-block;
+    margin-left: 10px;
+} 
+@media only screen and (min-width: 768px){
+    /* .contenedorHistorial .campos{
+        width: 60%;
+        max-width: 768px;
+    } */
+    .contenedorHistorial .campos a{
+        width: 35%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .contenedorHistorial .campos a div{
+        width: 100%;
+    }
+}
+.contenedorHistorial a img{
+    width: 1rem;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.contenedorHistorial a img:first-child{
+    width: 2.4rem;
+}
+ion-app > ion-router-outlet > div > ion-slides > div.swiper-wrapper{
+    height: calc(100vh - 11.6rem);
+}

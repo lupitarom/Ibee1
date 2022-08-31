@@ -1,0 +1,136 @@
+.contenedorFicha{
+    width: 90%;
+    margin: 0 auto;
+    height: 100%;
+    padding-top: 2rem;
+}
+@media only screen and (min-width: 768px){
+    .contenedorFicha{
+        width: 70%;
+        max-width: 768px;
+        margin: 0 auto;
+        height: calc(100% - 5rem);
+    }   
+}
+.contenedorFicha h1{
+    color: var(--azulFuerte);
+    font-weight: bold;
+    padding-left: 10px ;
+}
+.contenedorFicha form{
+    width: 100%;
+    height: calc(100% - 6rem);
+    overflow-y: scroll;
+}
+.contenedorFicha form label{
+    display: block;
+    font-size: 1.2rem;
+    padding-left: 10px;
+    color: var(--negroOpaco);
+}
+.contenedorFicha form label:first-child{
+    text-align: start;
+}
+.contenedorFicha form .limpiar{
+    width: 100%;
+    margin-top: 10px;
+    background-color: var(--azulClaro);
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+}
+/* .contenedorFicha form .obligatorio::placeholder{
+    color: red;
+    font-size: .8rem;
+} */
+.contenedorFicha form .limpiar button{
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 5px;
+    border-radius: 100px;
+    color: white;
+    background-color: var(--negroOpaco);
+}
+.contenedorFicha form .limpiar input{
+    min-height: 2.5rem;
+    margin: 0;
+}
+.contenedorFicha form input{
+    width: 100%;
+    min-height: 2.5rem;
+    margin: 10px 0 0 0;
+    border: none;
+    border-radius: 7px;
+    background-color: var(--azulClaro);
+}
+.contenedorFicha form .edadGenero{
+    display: flex;
+    margin-top: 5px;
+    justify-content: space-between;
+}
+.contenedorFicha form .edadGenero label{
+    text-align: center;
+    padding: 0;
+}
+.contenedorFicha form .edadGenero .edad, .contenedorFicha form .genero{
+    text-align: center;
+    width: 48.6%;
+}
+.contenedorFicha form .edadGenero .edad input{
+    text-align: center;
+    margin-top: 0;
+}
+.contenedorFicha form .edadGenero .genero div{
+    background-color: var(--azulClaro);
+    height: 2.5rem;
+    border-radius: 7px;
+}
+.contenedorFicha form .edadGenero .genero div button{
+    width: 50%;
+    background-color: var(--azulClaro);
+    height: 2.5rem;
+    font-size: .9rem;
+    border-radius: 7px;
+    color: gray;
+}
+.contenedorFicha form .edadGenero .genero div button:hover{
+    background-color: var(--azulFuerte);
+    color: white;
+}
+.contenedorFicha form .lugarFecha{
+    width: 100%;
+    margin-top: 10px;
+}
+.contenedorFicha form .lugarFecha .estadoCiudad{
+    display: flex; 
+    background-color: var(--azulClaro);
+    border-radius: 7px;
+    margin-top: 10px;
+}
+.contenedorFicha form .lugarFecha .estadoCiudad:first-of-type{
+    margin-top: 5px;
+}
+.contenedorFicha form .lugarFecha .estadoCiudad input{
+    width: 50%;
+    margin: 0;
+    text-align: center;
+}
+.contenedorFicha form .lugarFecha .estado{
+    display: flex; 
+    justify-content: space-between;
+    border-radius: 7px;
+}
+.contenedorFicha form .lugarFecha .estado input{
+    width: 48.6%;
+    margin: 10px 0 0 0;
+    text-align: center;
+}
+.contenedorFicha form .btnGuardar{
+    background-color: var(--azulFuerte);
+    width: 50%;
+    margin-top: 5px;
+    font-size: 1rem;
+    height: 2.5rem;
+    border-radius: 7px;
+    color: white;
+}

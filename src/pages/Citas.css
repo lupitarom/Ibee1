@@ -1,0 +1,130 @@
+.main {
+    width: 100vw;
+    height: 100vh;
+}
+.container {
+    width: 500px;
+    margin: auto;
+}
+.otra {
+    background: #000;
+}
+.contenedorCalendario {
+    width: 90%;
+    margin: 0 auto;
+}
+@media only screen and (min-width: 768px) {
+    .contenedorCalendario {
+        width: 60%;
+        max-width: 800px;
+    }
+}
+.contenedorCalendario .contenedorDias {
+    width: 100%;
+    height: 40px;
+    margin: 10px auto 0 auto;
+    background-color: var(--azulFuerte);
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+@media only screen and (max-width: 430px) {
+    .contenedorCalendario .contenedorDias {
+        margin-top: 5px;
+    }
+}
+.contenedorCalendario .contenedorDias div {
+    width: 13%;
+    text-align: center;
+}
+.contenedorCalendario .contenedorDiasNum {
+    width: 100%;
+    height: 50px;
+    margin: 0 auto;
+    background-color: rgb(247, 253, 255);
+    color: var(--negroOpaco);
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.contenedorCalendario .contenedorDiasNum .dia {
+    width: 14.2%;
+    height: 50px;
+    text-align: center;
+    font-weight: 700;
+    color: var(--azulMuyFuerte);
+    margin-top: 5px;
+}
+.contenedorCalendario .contenedorDiasNum .dia a {
+    display: block;
+    padding-top: 4px;
+    height: 90%;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    border: solid 1px var(--azulMedio);
+    border-radius: 5px;
+    font-weight: 700;
+    color: var(--azulMuyFuerte);
+    margin-top: 5px;
+    text-decoration: none;
+}
+.contenedorCalendario .contenedorDiasNum .dia a:hover {
+    background-color: var(--azulClaro);
+    transition: .3s;
+}
+.contenedorCalendario .contenedorDiasNum .dia a:hover .numCitasCalendar{
+    background-color: white;
+    color: var(--azulFuerte);
+    transition: .4s;
+}
+.contenedorCalendario .contenedorDiasNum .dia.diasNoMes a:hover .numCitasCalendar{
+    background-color: var(--grisClaro);
+    color: white;
+}
+.contenedorCalendario .contenedorDiasNum .dia.diasSiMes a:hover .numCitasCalendar{
+    border: solid 1px var(--azulMedio)!important;
+}
+.diasNoMes a {
+    color: var(--grisClaro)!important;
+    font-weight: 500!important;
+    cursor: not-allowed;
+}
+.diasNoMes a:hover {
+    background-color: white!important;
+}
+.diasSiMes{
+    color: var(--azulFuerte)!important;
+    font-weight: 500!important;
+}
+.diaActual a{
+    border: solid 2px var(--azulMedio)!important;
+    background-color: var(--azulClaro);
+}
+.numCitasCalendar {
+    font-size: .8rem;
+    width: 18px;
+    height: 18px;
+    margin: 0 2px 0 auto;
+    background-color: var(--azulMedio);
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.dia.diasNoMes .numCitasCalendar{
+    background-color: var(--grisClaro);
+}
+@media only screen and (min-width: 768px) {
+    .contenedorCalendario .contenedorDias {
+        max-width: 800px;
+    }
+    .contenedorCalendario .contenedorDiasNum {
+        max-width: 800px;
+    }
+}

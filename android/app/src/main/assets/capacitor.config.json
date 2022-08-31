@@ -1,0 +1,6 @@
+{
+	"appId": "com.paralel.me.ibee",
+	"appName": "Ibee",
+	"webDir": "build",
+	"bundledWebRuntime": false
+}

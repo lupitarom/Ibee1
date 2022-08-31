@@ -1,0 +1,12 @@
+.container{
+    width: 600px;
+    margin: auto;
+}
+
+.form-control{
+    background-color: var(--azulClaro);
+}
+
+input{
+    background-color: var(--azulClaro);
+}

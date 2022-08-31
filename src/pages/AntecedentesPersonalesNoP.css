@@ -1,0 +1,170 @@
+.contenedorAntecedentesPersonalesNoP {
+    width: 90%;
+    margin: 0 auto;
+    height: calc(100% - 5.5rem);
+}
+
+@media only screen and (min-width: 768px) {
+    .contenedorAntecedentesPersonalesNoP {
+        width: 70%;
+        max-width: 768px;
+        margin: 0 auto;
+        height: calc(100% - 5rem);
+    }
+}
+
+.contenedorAntecedentesPersonalesNoP h1{
+    color: var(--azulFuerte);
+    font-weight: bold;
+}
+.contenedorAntecedentesPersonalesNoP form{
+    width: 100%;
+    height: calc(100% - 5rem);
+    overflow-y: scroll;
+}
+.contenedorAntecedentesPersonalesNoP form label{
+    display: block;
+    font-size: 1rem;
+    text-align: start;
+    margin-left: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+    color: var(--negroOpaco);
+}
+.contenedorAntecedentesPersonalesNoP form .bloqueDos{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+}
+.contenedorAntecedentesPersonalesNoP form input{
+    border: none;
+    background-color: var(--azulClaro);
+    border-radius: 7px;
+    margin-top: 5px;
+    height: 40px;
+    width: 100%;
+}
+.contenedorAntecedentesPersonalesNoP form .bloque {
+    width: 100%;
+    margin-top: 5px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 5px;
+    min-height: 40px;
+}
+
+.contenedorAntecedentesPersonalesNoP form .bloque label {
+    background-color: var(--azulClaro);
+    padding: 5px;
+    color: var(--negroOpaco);
+    border-radius: 7px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+.contenedorAntecedentesPersonalesNoP form .bloque div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.contenedorAntecedentesPersonalesNoP form .bloque div button{
+    background-color: var(--azulClaro);
+    width: 48%;
+    height: 100%;
+    border-radius: 7px;
+    color: grey;
+}
+.contenedorAntecedentesPersonalesNoP form .bloque div button:hover{
+    background-color: var(--azulFuerte);
+    color: white;
+}
+.contenedorAntecedentesPersonalesNoP form .limpiar{
+    width: 100%;
+    margin-top: 5px;
+    background-color: var(--azulClaro);
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+}
+.contenedorAntecedentesPersonalesNoP form .limpiar button{
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-right: 5px;
+    font-size: .9rem;
+    display: flex;
+    border-radius: 100px;
+    color: white;
+    background-color: var(--negroOpaco);
+}
+.contenedorAntecedentesPersonalesNoP form .limpiar input{
+    height: 2.5rem;
+    margin: 0;
+    padding-left: 5px;
+    width: 100%;
+    background-color: var(--azulClaro);
+    border: none;
+    border-radius: 7px;
+}
+.contenedorAntecedentesPersonalesNoP form .bloqueTres{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+}
+.contenedorAntecedentesPersonalesNoP form .bloqueTres div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.contenedorAntecedentesPersonalesNoP form .bloqueTres div label{
+    font-weight: 500;
+}
+.contenedorAntecedentesPersonalesNoP form .bloqueTres div .btnRadio{
+    width: 1.2rem;
+    margin: 0 15px 0 0;
+}
+
+.contenedorAntecedentesPersonalesNoP form .bloqueCuatro{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+}
+.contenedorAntecedentesPersonalesNoP form .bloqueCuatro div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.contenedorAntecedentesPersonalesNoP form .bloqueCuatro div label{
+    font-weight: 500;
+}
+.contenedorAntecedentesPersonalesNoP form .bloqueCuatro div .btnRadio{
+    width: 1.2rem;
+    margin: 0 20px;
+}
+.contenedorAntecedentesPersonalesNoP form input[type=date]{
+    padding: 0 10px 0 0;
+}
+.contenedorAntecedentesPersonalesNoP form input[type=date]::before{
+    padding: 0 5px;
+    content: "Fecha: ";
+}
+.contenedorAntecedentesPersonalesNoP form .prueba{
+    border-radius: 100px;
+    background-color: tomato;
+    color: turquoise;
+}
+.obligatorio::placeholder{
+    color: red!important;
+}
+.contenedorAntecedentesPersonalesNoP form .btnGuardar{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 5px;
+}
+.contenedorAntecedentesPersonalesNoP form .btnGuardar button{
+    background-color: var(--azulFuerte);
+    width: 50%;
+    height: 2.5rem;
+    color: white;
+    border-radius: 7px;
+}

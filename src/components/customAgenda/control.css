@@ -1,0 +1,81 @@
+.contenedorControl {
+    width: 100%;
+    margin: 10px auto 0 auto;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--azulFuerte);
+    border-radius: 8px;
+    align-items: center;
+}
+.contenedorControl .contenidoFecha button {
+    padding: 3px;
+}
+
+.contenedorControl .contenidoFecha button img {
+    width: 13px;
+    filter: var(--blancoImg);
+}
+
+.contenedorControl .contenidoFecha{
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    height: 100%;
+}
+.contenedorControl .contenidoBtn {
+    color: white;
+    height: 100%;
+    display: flex;
+}
+.contenedorControl .contenidoFecha span {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.contenedorControl .contenidoFecha button {
+    color: white;
+    height: 100%;
+    background-color: var(--azulFuerte);
+    min-width: 22px;
+    border-radius: 8px;
+}
+.contenidoBtn a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 100%;
+    background-color: var(--azulFuerte);
+    min-width: 37px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+@media only screen and (max-width: 375px) {
+    .contenedorControl .contenidoFecha button, .contenidoBtn button {
+        min-width: 5px;
+    }
+}
+
+.contenedorControl .contenidoFecha button:hover, .contenidoBtn a:hover, .contenidoBtn .marcaControl {
+    background-color: var(--azulMedio);
+}
+
+div.contenedorControl>div.contenidoFecha>button:nth-child(1) {
+    margin-left: 5px;
+}
+
+div.contenedorControl>div.contenidoBtn>a:nth-child(3) {
+    margin-right: 5px;
+}
+
+@media only screen and (min-width: 768px) {
+    div.contenedorControl>div.contenidoFecha>button:nth-child(1) {
+        margin-left: 20px;
+    }
+    div.contenedorControl>div.contenidoBtn>a:nth-child(3) {
+        margin-right: 20px;
+    }
+}

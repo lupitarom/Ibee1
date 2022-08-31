@@ -1,0 +1,158 @@
+.contenedorEspacios {
+    width: 90%;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+@media only screen and (min-width: 768px) {
+    .contenedorEspacios {
+        width: 60%;
+        max-width: 800px;
+    }
+}
+
+.contenedorEspacios .fecha {
+    background-color: var(--azulFuerte);
+    margin-top: 1rem;
+    border-radius: 8px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.contenedorEspacios .fecha button {
+    width: 40px;
+    background-color: var(--azulFuerte);
+}
+
+.contenedorEspacios .fecha button img {
+    filter: var(--blancoImg);
+}
+
+.contenedorEspacios .fecha h1 {
+    color: white;
+    display: inline-block;
+    text-align: center;
+    margin: .7rem;
+}
+
+.contenedorEspacios .semana, .contenedorEspacios .semanaNum {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.contenedorEspacios .semana div {
+    width: 40px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.contenedorEspacios .semanaNum div {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.contenedorEspacios .semanaNum div:hover {
+    background-color: var(--azulFuerte);
+    border-radius: 100px;
+    color: white;
+}
+
+.contenedorEspacios h2 {
+    margin: 0;
+    color: var(--azulFuerte);
+}
+
+.contenedorEspacios h3 {
+    margin-top: 5px;
+    color: var(--azulMedio);
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.contenedorEspacios h3 span {
+    color: var(--azulFuerte);
+    margin-right: 3px;
+    font-weight: bold;
+}
+
+.contenedorEspacios .contenedorHoras {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 8px;
+    overflow-y: scroll;
+}
+
+@media only screen and (max-height: 650px) {
+    .contenedorEspacios .contenedorHoras {
+        height: 47vh;
+    }
+}
+
+@media only screen and (max-height: 900px) {
+    .contenedorEspacios .contenedorHoras {
+        height: 55vh;
+    }
+}
+
+.contenedorEspacios .contenedorHoras .espacio {
+    display: flex;
+    height: 40px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px 8px 0 0;
+    margin-top: 5px;
+}
+
+.contenedorEspacios .espacio-hora-indicador {
+    width: 20%;
+    text-align: center;
+}
+
+.contenedorEspacios .espacio-cita {
+    width: 80%;
+    height: 100%;
+    background-color: var(--azulClaro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.contenedorEspacios .espacio-cita:hover {
+    width: 80%;
+    background-color: var(--azulFuerte);
+    color: white;
+    transition: .5s;
+}
+
+.hoy{
+    width: 80%;
+    color: var(--azulFuerte);
+    transition: .5s;
+    border: 2px solid var(--azulFuerte);
+    border-radius: 50%;
+}
+
+.selected{
+    width: 80%;
+    color: white;
+    transition: .5s;
+    background-color: var(--azulFuerte);
+    border-radius: 50%;
+}

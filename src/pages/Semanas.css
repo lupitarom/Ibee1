@@ -1,0 +1,93 @@
+.contenedorSemana {
+    width: 90%;
+    margin: 0 auto;
+}
+
+@media only screen and (min-width: 768px) {
+    .contenedorSemana {
+        width: 60%;
+        max-width: 800px;
+    }
+}
+.contenedorSemana .contenedorHoras {
+    width: 100%;
+    height: calc(80vh - 5rem);
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 8px;
+    overflow-y: scroll;
+}
+
+.contenedorSemana .contenidoDias {
+    width: 100%;
+    margin-top: 0;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding-right: 5px;
+}
+
+.contenedorSemana .contenidoDias .principal {
+    width: 100%;
+    padding-right: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+@media only screen and (max-width: 430px) {
+    .contenedorSemana .contenidoDias .principal {
+        padding-right: 0;
+    }
+}
+
+.contenedorSemana .contenedorHoras .espacio {
+    width: 100%;
+    display: flex;
+    height: 50px;
+    border-bottom: 1px solid var(--azulClaro);
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px 8px 0 0;
+    margin-top: 5px;
+}
+.contenedorSemana .espacio-hora-indicador {
+    width: 12.5%;
+    text-align: center;
+}
+
+.contenedorSemana .espacio-cita {
+    width: 87.5%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contenedorSemana .espacio-cita .dia {
+    width: 15%;
+    height: 100%;
+    border-right: solid 1px var(--azulClaro);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedorSemana .espacio-cita .dia:hover {
+    background-color: var(--azulFuerte);
+    color: white;
+    transition: .3s;
+    border-radius: 0;
+    border-radius: 0 8px;
+}
+
+.contenedorSemana .espacio-cita .dia div {
+    width: 1.7rem;
+    height: 1.7rem;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}

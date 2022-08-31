@@ -1,0 +1,207 @@
+.contenedorCitasPru{
+    width: 100%;
+}
+.contenedorCitasPru .contenido{
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 15px;
+}
+.contenedorCitasPru .contenido .calendar{
+    width: 100%;
+    height: 15vh;
+}
+
+@media only screen and (min-width: 768px){  
+    .contenedorCitasPru .contenido .calendar{
+        width: 90%;
+        margin-right: 0;
+        margin-left: auto;
+    }
+}
+
+.contenedorCitasPru .contenido .calendar .fecha button{
+    width: 60px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--azulFuerte);
+}
+.contenedorCitasPru .contenido .calendar .fecha input{
+    background-color: var(--azulFuerte);
+    border: none;
+    text-align: center;
+}
+
+.contenedorCitasPru .contenido .calendar .fecha button img{
+    width: 30px;
+    filter: var(--blancoImg);
+}
+.contenedorCitasPru .contenido .calendar .fecha{
+    background-color: var(--azulFuerte);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    border-radius: 5px;
+}
+.contenedorCitasPru .contenido .calendar .fecha h1{
+    font-weight: bold;
+    margin: .3rem auto;
+}
+
+.contenedorCitasPru .contenido .calendar .semana{
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.4rem;
+}
+.contenedorCitasPru .contenido .calendar .semana .dia{
+    width: 2rem;
+    text-align: center;
+}
+.contenedorCitasPru .contenido .calendar .semana .dia p{
+    margin: 10px 0;
+}
+
+.contenedorCitasPru .contenido .calendar .semana .dia .diaNum{
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+}
+
+.contenedorCitasPru .contenido .calendar .semana .dia .diaNum:hover, .marca {
+    background-color: var(--azulMuyFuerte);
+    cursor: pointer;
+    border-radius: 100%;
+    margin: 0 auto;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedorCitasPru h2{
+    color: var(--azulMedio);
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+@media only screen and (min-width: 768px){  
+    .contenedorCitasPru h2{
+        display: none;
+    }
+}
+.contenedorCitasPru .espacios{
+    width: 100%;
+    overflow-y: scroll;
+    height: 49vh;
+    margin: auto;
+}
+
+.contenedorCitasPru .dayPru{
+    width: 100%;
+    margin: 5px 0;
+}
+.contenedorCitasPru .dayPru a{
+    color: var(--negroOpaco);
+    text-decoration: none;
+    width: 100%;
+}
+.contenedorCitasPru .dayPru .hora{
+    width: 30%;
+    display: inline-block;
+    text-align: center;
+    border-bottom: solid 3px var(--azulMedio);
+}
+@media only screen and (min-width: 768px){  
+    .contenedorCitasPru .dayPru .hora{
+        width: 10%;
+    }
+}
+.contenedorCitasPru .dayPru .horaText{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+@media only screen and (min-width: 768px){  
+        
+    .contenedorCitasPru .dayPru .horaText{
+        width: 100%;
+    }
+}
+.citasPru{
+    display: inline-block;
+    height: 100%;
+    width: 70%;
+    background-color: var(--azulClaro);
+    text-align: center;
+    align-items: center;
+    border-left: solid 1px rgb(255, 255, 255);
+    border-right: solid 1px rgb(255, 255, 255);
+    border-bottom: solid 3px rgb(255, 255, 255);
+    border-radius: 10px;
+}
+.citasPru p:first-child{
+    margin: 5px;
+    margin-bottom: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;    
+}
+.citasPru p img{
+    filter: var(--blancoImg);
+    width: 20px;
+}
+.citasPru p:last-child{
+    margin: 5px;
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;  
+}
+.noMostrar{
+    display: none;
+}
+@media only screen and (min-width: 768px){  
+    .citasPru{
+        width: 14.98%;
+        padding: 5px;
+    }
+    .noMostrar{
+        display: inline-block;
+        margin: 0 auto;
+        height: 100%;
+    }
+}
+.contenedorCitas .numCitas{
+    display: flex;
+    height: 20%;
+    justify-content: end;
+}
+.contenedorCitas .numCitas p{
+    display: inline-block;
+    color: var(--azulMedio);
+}
+.contenedorCitas .numCitas p span{
+    font-weight: bold;
+    color: var(--azulFuerte);
+}
+.contenedorCitas .citasPru:hover{
+    border-bottom: solid 3px var(--azulMedio);
+}
+/*
+.citasPru .marca, .noDisponibleCita{
+    background: var(--azulFuerte);*/
+  /*  background: linear-gradient(180deg, rgba(7,140,172,1) 0%, rgba(9,106,131,1) 88%);*/
+ /*   color: white;
+    border: none;
+    border-bottom: solid 3px white;
+}
+*/
+.content2 {    
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;    
+}

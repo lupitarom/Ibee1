@@ -1,0 +1,215 @@
+.contenedorCitas{
+    width: 100%;
+}
+.contenedorCitas .contenido{
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 15px;
+}
+.xxx{
+    color: var(--negroOpaco);
+}
+@media only screen and (min-width: 768px){  
+    .contenedorCitas .contenido{
+        width: 70%;
+    }
+}
+@media only screen and (min-width: 900px){  
+    .contenedorCitas .contenido{
+        width: 60%;
+    }
+}
+.contenedorCitas .contenido .calendar{
+    width: 100%;
+    height: 15vh;
+}
+
+.contenedorCitas .contenido .calendar .fecha button{
+    width: 60px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--azulFuerte);
+}
+.contenedorCitas .contenido .calendar .fecha input{
+    background-color: var(--azulFuerte);
+    border: none;
+    text-align: center;
+}
+
+.contenedorCitas .contenido .calendar .fecha button img{
+    width: 30px;
+    filter: var(--blancoImg);
+}
+.contenedorCitas .contenido .calendar .fecha{
+    background-color: var(--azulFuerte);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    border-radius: 5px;
+}
+.contenedorCitas .contenido .calendar .fecha h1{
+    font-weight: bold;
+    margin: .3rem auto;
+}
+
+.contenedorCitas .contenido .calendar .semana{
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.4rem;
+}
+.contenedorCitas .contenido .calendar .semana .dia{
+    width: 2rem;
+    text-align: center;
+}
+.contenedorCitas .contenido .calendar .semana .dia p{
+    margin: 10px 0;
+}
+
+.contenedorCitas .contenido .calendar .semana .dia .diaNum{
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+}
+
+.contenedorCitas .contenido .calendar .semana .dia .diaNum:hover, .marca {
+    background-color: var(--azulMuyFuerte);
+    cursor: pointer;
+    border-radius: 100%;
+    margin: 0 auto;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.espacios{
+    width: 100%;
+    overflow-y: scroll;
+    height: 49vh;
+    margin: auto;
+}
+
+h2{
+    color: var(--azulMedio);
+    text-transform: uppercase;
+}
+.contenedorCitas .day{
+    width: 100%;
+    margin: 3px 0;
+}
+.contenedorCitas .day a{
+    color: black;
+    text-decoration: none;
+    width: 100%;
+}
+.contenedorCitas .day .hora{
+    width: 30%;
+    display: inline-block;
+    text-align: center;
+}
+.contenedorCitas .day .horaText{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+@media only screen and (min-width: 768px){  
+        
+    .contenedorCitas .day .horaText{
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+    }
+}
+.citas{
+    display: inline-block;
+    height: 100%;
+    width: 70%;
+    background-color: var(--azulClaro);
+    text-align: center;
+    align-items: center;
+}
+.contenedorCitas .numCitas{
+    display: flex;
+    height: 20%;
+    justify-content: end;
+}
+.contenedorCitas .numCitas p{
+    display: inline-block;
+    color: rgb(15, 171, 199);
+}
+.contenedorCitas .numCitas p span{
+    font-weight: bold;
+    color: var(--azulFuerte);
+}
+.contenedorCitas .day:hover, .marca2, .noDisponibleHora{
+    background-color: var(--azulClaro);
+}
+.contenedorCitas .day:hover .citas, .marca, .noDisponibleCita{
+    background-color: var(--azulFuerte);
+    color: white;
+}
+/*modal*/
+.modal .btnCerrar{
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    margin: 30px 30px 0 auto;
+}
+.modal{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    color: var(--negroOpaco);
+}
+.modal .contenido{
+    width: 80%;
+    height: 100%;
+    margin: 25% auto;
+}
+@media only screen and (min-width: 768px){
+    .modal .contenido{
+        margin-top: 5%;
+    }
+}
+.modal .contenido p{
+    font-weight: bold;
+    color: var(--azulFuerte);
+}
+.modal .contenido label{
+    display: block;
+    margin-top: 30px;
+    color: var(--negroOpaco);
+}
+.modal .contenido input{
+    width: 100%;
+    text-align: center;
+    display: block;
+    margin: auto;
+    border: none;
+    border-bottom: solid 2px var(--azulMedio);
+    color: var(--negroOpaco);
+}
+.modal .btnCerrar img{
+    width: 100%;
+    filter: var(--rojoImg);
+}
+.modal .btnCerrar:hover img{
+    width: 90%;
+}
+.modal .contenido .btnGuardar{
+    display: block;
+    width: 50%;
+    height: 40px;
+    border-radius: 15px;
+    color: white;
+    background-color: var(--azulFuerte);
+    margin: 30px auto;
+}
+.modal .contenido .btnGuardar:hover{
+    background-color: var(--azulMuyFuerte);
+}

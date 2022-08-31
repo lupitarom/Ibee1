@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "346187349426",
+    "project_id": "ibee-push-notifications",
+    "storage_bucket": "ibee-push-notifications.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:346187349426:android:a0f868b264e84a4e7378ab",
+        "android_client_info": {
+          "package_name": "com.paralel.me.ibee"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "346187349426-s18kahea2ltmqkn2b5kktg7qngfeqcd8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXyVHPYgqafyteuR7QpxhYYuHO7IHrZ2w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "346187349426-s18kahea2ltmqkn2b5kktg7qngfeqcd8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:346187349426:android:bb99afb987d247847378ab",
+        "android_client_info": {
+          "package_name": "io.ionic.starter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "346187349426-s18kahea2ltmqkn2b5kktg7qngfeqcd8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXyVHPYgqafyteuR7QpxhYYuHO7IHrZ2w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "346187349426-s18kahea2ltmqkn2b5kktg7qngfeqcd8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

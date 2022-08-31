@@ -1,0 +1,83 @@
+.contenedorPacientesPrincipal{
+    width: 100%;
+}
+.contenido{
+    width: 100%;
+    margin: 20px auto 0 auto;
+}
+@media only screen and (min-width: 768px){
+    .contenedorPacientesPrincipal .contenido{
+        width: 70%;
+        margin: 15px auto;
+    }
+    .contenedorPacientesPrincipal .contenido .textoBusqueda{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+}
+.contenedorPacientesPrincipal .contenido .busqueda{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+}
+
+.contenedorPacientesPrincipal .contenido form{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+} 
+.contenedorPacientesPrincipal .contenido form p{
+    margin: 0;
+    color: var(--negroOpaco);
+    font-size: .9rem;
+}
+.contenedorPacientesPrincipal .contenido form div{
+    width: 80%;
+} 
+.contenedorPacientesPrincipal .contenido form div input{
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-bottom: solid 2px gray;
+    margin: 0;
+} 
+.contenedorPacientesPrincipal .contenido form .contenedorBtn{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 50px;
+    width: 70px;
+    padding: 1;
+}
+.contenedorPacientesPrincipal .contenido form button{
+    width: 100%;
+    height: 100%;
+}
+
+.contenedorPacientesPrincipal .contenido form button img{
+    width: 25px;
+}
+.contenedorPacientesPrincipal h1{
+    color: var(--azulFuerte);
+    margin-bottom: 0;
+    display: inline-block;
+    text-transform: uppercase;
+}
+.contenedorPacientesPrincipal .contenido p{
+    margin: 0 10px 0 10px;
+}
+.listPacientesP{
+    height: 60vh;
+    margin-top: 10px;
+}
+
+@media only screen and (min-width: 768px){ 
+    .listPacientesP{
+        height: 70vh;
+    }
+}
+.mostrar{
+    display: none;
+}

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #323232;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="agregar" class="cls-1" d="M500,31c258.65,0,469,210.057,469,469,0,259.33-210.35,470-469,470C240.311,970,30,759.33,30,500,30,241.057,240.311,31,500,31ZM429,431H246V572H429V755H570V572H754V431H570V247H429V431Z"/>
+</svg>

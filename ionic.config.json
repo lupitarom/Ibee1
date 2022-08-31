@@ -1,0 +1,7 @@
+{
+  "name": "Ibee",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}

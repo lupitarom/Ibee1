@@ -1,0 +1,11 @@
+<svg id="Grupo_1" data-name="Grupo 1" xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #323232;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="historial" class="cls-1" d="M6.282,951.586V908.6H993.751v42.986H6.282ZM757.617,521.735h193.2v300.9h-193.2V521.735ZM414.15,48.9h193.2V822.63H414.15V48.9ZM70.682,220.84h193.2V822.63H70.682V220.84Z"/>
+</svg>

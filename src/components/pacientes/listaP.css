@@ -1,0 +1,68 @@
+
+.listaPT{
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+}
+.contenidoPaciente {
+    height: 3.5rem;
+    width: 90%;
+    margin: 0 auto 25px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.contenidoPaciente .foto{
+    width: 3.5rem;
+    height: 3.5rem;  
+    margin: 0 10px 0 0;
+    border-radius: 100%;
+    /* background-image: url("https://dentalesthetics.mx/Ibee/view/pacientes/foto/foto_1459.png"); */
+    background-size: cover;
+    /* background-attachment: fixed; */
+    background-position: center;
+}
+.contenidoPaciente .nombre{
+    display: inline-block;
+    background-color: var(--azulClaro);
+    width: 80%;
+    margin: auto auto;
+    align-items: center;
+    display: flex;
+    height: 100%;
+    border-radius: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: Ellipsis;
+}
+.contenidoPaciente .nombre:hover{
+    background-color: var(--azulFuerte);
+    color: white;
+    cursor: pointer;
+    transition: .5s;
+}
+.contenidoPaciente .nombre a{
+    width: 100%; 
+    height: 100%;
+}
+.contenidoPaciente .nombre:hover p{
+    color: white;
+    transition: .1s;
+}
+.contenidoPaciente .nombreText{
+    width: 95%;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: capitalize;
+}
+.contenidoPaciente .nombreText p{
+    margin: 0 20px;
+    display: block;
+    color: var(--negroOpaco);
+}
+.contenidoPaciente .flecha{
+    height: 1rem;
+}
