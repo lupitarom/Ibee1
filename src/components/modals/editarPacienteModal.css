@@ -52,6 +52,14 @@
     width: 200px;
 }
 
+.boton-x{ 
+    color: var(--azulFuerte);
+    font-size: 30px;
+    margin-left: 90%;
+    margin-bottom: -7%;
+    margin-top: 10px;
+}
+
 .take-image-button{
     position: absolute;
     top: 50%;

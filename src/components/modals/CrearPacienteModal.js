@@ -102,8 +102,9 @@ export const CrearPacienteModal = ({ setShowModal }) => {
 
 	return (
 		<>
+			
+			<button className="boton-x" onClick={() => setShowModal(false)}>x</button>
 			<h1 className='CrearNuevoPaciente'>Crear nuevo paciente</h1>
-
 			<div className="imagen-preview-container">
 				<img
 					className="imagen-preview"
@@ -141,8 +142,7 @@ export const CrearPacienteModal = ({ setShowModal }) => {
                     </div>
 				<IonButton onClick={crear}>Crear</IonButton>
 			</form>
-
-			<IonButton onClick={() => setShowModal(false)}>cerrar</IonButton>
+			
 		</>
 	)
 }
