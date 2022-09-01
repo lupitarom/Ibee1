@@ -19,7 +19,7 @@ export const Footer = () => {
             <a className={`${ pathname.includes('pacientesprincipal') && 'marcaIcono'}`} href="/pacientesprincipal">
                 <img src={imgPacientes} alt="IconPaciente" /><p>Pacientes</p>
             </a>
-            <a className={`${ pathname.includes('historia') && 'marcaIcono'}`} href="/historiaclinica">
+            <a className={`${ pathname.includes('HistoriaClinica') && 'marcaIcono'}`} href="/HistoriaClinica/3">
                 <img src={imgHistoria} alt="IconHistorial" /><p>Historial</p>
                 </a>
             <a className={`${ pathname.includes('mas') && 'marcaIcono'}`} href="/mas">
