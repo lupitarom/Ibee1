@@ -19,7 +19,7 @@ export const Header = () => {
 
     return (
         <div className="headerPacientes">
-            <a href="/home" className="centro">
+            <a href="/Agenda" className="centro">
                 <img className="logo" src={ibeeBlanco} alt="logo" />
             </a>
             <div className="barHeader">
@@ -29,7 +29,7 @@ export const Header = () => {
                 <a className={`${pathname.includes('pacientesprincipal') && 'marcaIcono'}`} href="/pacientesprincipal">
                     <img src={imgPacientes} alt="IconPaciente" /><p>Pacientes</p>
                 </a>
-                <a className={`${pathname.includes('historia') && 'marcaIcono'}`} href="/historiaclinica">
+                <a className={`${pathname.includes('historia') && 'marcaIcono'}`} href="/HistoriaClinica/3">
                     <img src={imgHistoria} alt="IconHistorial" /><p>Historial</p>
                 </a>
                 <a className={`${pathname.includes('mas') && 'marcaIcono'}`} href="/mas">
