@@ -6,12 +6,31 @@
 }
 
 .form-container input{
-    width: 100%;
-    min-height: 2.5rem;
+    width: 48.6%;
     margin: 10px 0 0 0;
+    text-align: center;
+    min-height: 2.5rem;
     border: none;
-    border-radius: 7px;
     background-color: var(--azulClaro);
+    border-radius: 10px;
+}
+.form-container .a{
+    display: flex; 
+    justify-content: space-between;
+    
+}
+.form-container .c{
+    width: 80%;
+    margin-right: 10px;
+}
+.form-container .d{
+    width: 20%;
+    
+}
+.form-container .b{
+    display: flex; 
+    justify-content: space-between;
+    width: 100%;
 }
 
 .imagen-preview-container{
