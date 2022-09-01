@@ -116,44 +116,29 @@ export const CrearPacienteModal = ({ setShowModal }) => {
 				</button>
 			</div>
 			<form className="form-container">
-                    <div>
-                        <input 
-                            placeholder="Nombre" 
-                            />
-                    </div>
-                    <div>
+                    <div className='a'>
+					<input placeholder="Nombre" />
                     <input placeholder="Apellido Paterno" />
                     </div>
-                    <div>
+					<div className='a'>
                     <input placeholder="Apellido Materno" />
+					<input placeholder="Telefono" />
                     </div>
-					<div>
-                    <input placeholder="Edad" />
+					<div className='b'>
+                    <input className='c' placeholder="RFC" />
+					<input className='d' placeholder="Edad" />
                     </div>
-                    <div >
-                    <input placeholder="RFC" />
-                    </div>
-                    <div >
-                    <input placeholder="Telefono" />
-                    </div>
-					<div >
+					<div className='a'>
                     <input placeholder="Estado" />
+					<input placeholder="cuidad" />
                     </div>
-                    <div >
-                    <input
-					placeholder="Ciudad" />
-                    </div>
-                    <div>
+					<div className='a'>
                     <input placeholder="Colonia" />
+					<input placeholder="Calle" />
                     </div>
-					<div>
-                    <input placeholder="Calle" />
-                    </div>
-                    <div>
+					<div className='a'>
                     <input placeholder="Número" />
-                    </div>
-                    <div>
-                    <input placeholder="CP" />
+					<input placeholder="CP" />
                     </div>
 				<IonButton onClick={crear}>Crear</IonButton>
 			</form>
