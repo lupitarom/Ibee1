@@ -38,12 +38,9 @@ export const Header = () => {
                     </div>
                 </a>
             </div>
-
-            <div className="usuario">
-                <button
-                    onClick={logout}
-                >salir</button>
+                
+                    <div className="usuario"></div>
+                
             </div>
-        </div>
     )
 }
