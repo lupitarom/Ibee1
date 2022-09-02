@@ -40,9 +40,6 @@ export const Header = () => {
             </div>
 
             <div className="usuario">
-                <button
-                    onClick={logout}
-                >salir</button>
             </div>
         </div>
     )
