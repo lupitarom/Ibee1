@@ -38,9 +38,14 @@ export const Header = () => {
                     </div>
                 </a>
             </div>
+<<<<<<< HEAD
 
             <div className="usuario">
+=======
+                
+                    <div className="usuario"></div>
+                
+>>>>>>> 8156936139f0a352d65e33781fc9cd044d05dd1e
             </div>
-        </div>
     )
 }
