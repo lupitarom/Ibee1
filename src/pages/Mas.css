@@ -1,0 +1,48 @@
+.contenedorBloque1{
+    display: flex;
+    justify-content: space-around;
+
+}
+.bloque1{
+    width:50%;
+    background-color: var(--azulClaro);
+    height: 60px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+.bloque1:hover{
+    background-color: var(--azulFuerte);
+    color: white;
+}
+
+.bloque1:hover a p{
+    color: white;
+}
+
+.bloque1:hover a img{
+    filter: var(--blancoImg);
+}
+.bloque1 a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-decoration: none;
+}
+.bloque1 a img:first-of-type{
+    height: 2.5rem;
+    width: 3rem;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+.bloque1 a p{
+    color: var(--negroOpaco);
+    font-size: 1.1rem;
+}
+.bloque1 a img:last-of-type{
+    width: 20px;
+}
+.bloque1 a img.edit{
+    height: 3rem;
+}
