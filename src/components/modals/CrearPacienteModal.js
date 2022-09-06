@@ -129,7 +129,15 @@ export const CrearPacienteModal = ({ setShowModal }) => {
 					<input className='d' placeholder="Edad" />
                     </div>
 					<div className='a'>
-                    <input placeholder="Estado" />
+                    <select
+							name="estado"
+							value={values.estado}
+							onChange={handleChanges}
+						>
+							{estadosDeMexico.map((estado) => (
+								<option value={estado}>{estado}</option>
+							))}
+						</select>
 					<input placeholder="cuidad" />
                     </div>
 					<div className='a'>

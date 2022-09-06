@@ -49,6 +49,7 @@ export const EditarPacienteModal = ({ paciente, setPaciente, setShowModal }) => 
 		ap_paterno: paciente.ap_paterno,
 		rfc: paciente.rfc,
 		telefono: paciente.telefono?.telefono, // TODO
+		edad: paciente.edad,
 		estado: paciente.estado,
 		ciudad: paciente.ciudad,
 		colonia: paciente.colonia,
@@ -101,8 +102,8 @@ export const EditarPacienteModal = ({ paciente, setPaciente, setShowModal }) => 
 
 	return (
 		<>
+		<button className="boton-x" onClick={() => setShowModal(false)}>x</button>
 			<h1>Editar paciente</h1>
-
 			<div className="imagen-preview-container">
 				<img
 					className="imagen-preview"
@@ -114,21 +115,14 @@ export const EditarPacienteModal = ({ paciente, setPaciente, setShowModal }) => 
 				</button>
 			</div>
 			<form className="form-container">
-				<div>
-					<label>Foto:</label>
-				</div>
-				<div>
-					<label>Nombre:</label>
+				<div className='a'>
 					<input
 						type="text"
 						name="nombre"
 						value={values.nombre}
 						onChange={handleChanges}
 					/>
-				</div>
-				
-				<div>
-					<label>Apellido paterno:</label>
+
 					<input
 						type="text"
 						name="ap_paterno"
@@ -136,28 +130,13 @@ export const EditarPacienteModal = ({ paciente, setPaciente, setShowModal }) => 
 						onChange={handleChanges}
 					/>
 				</div>
-				<div>
-					<label>Apellido materno:</label>
+				<div className='a'>
 					<input
 						type="text"
 						name="ap_materno"
 						value={values.ap_materno}
 						onChange={handleChanges}
 					/>
-				</div>
-				
-				<div>
-					<label>RFC:</label>
-					<input
-						type="text"
-						name="rfc"
-						value={values.rfc}
-						onChange={handleChanges}
-					/>
-				</div>
-
-				<div>
-					<label>telefono:</label>
 					<input
 						type="tel"
 						name="telefono"
@@ -166,12 +145,30 @@ export const EditarPacienteModal = ({ paciente, setPaciente, setShowModal }) => 
 					/>
 				</div>
 
-				<div>
-					<div>
-						<label>Estado:</label>
+				<div className='b'>
+					<div className='c'>
+					<input
+						type="text"
+						name="rfc"
+						value={values.rfc}
+						onChange={handleChanges}
+					/>
+					</div>
+					<div className='d'>
+					<input
+						type="text"
+						name="edad"
+						value={values.edad}
+						onChange={handleChanges}
+					/>
+					</div>
+					</div>
+
+					<div className='a'>
+
 						<select 
                             name="estado"
-                            value={paciente.estado}
+                            value={values.estado}
                             onChange={handleChanges}
                             >
 							{estadosDeMexico.map((estado) => (
@@ -179,30 +176,24 @@ export const EditarPacienteModal = ({ paciente, setPaciente, setShowModal }) => 
                                     value={estado}>{estado}</option>
 							))}
 						</select>
-					</div>
 
-					<div>
-						<label>Ciudad:</label>
 						<input
 							type="text"
 							name="ciudad"
 							value={values.ciudad}
 							onChange={handleChanges}
 						/>
-					</div>
+						</div>
 
-					<div>
-						<label>Colonia:</label>
+					<div className='a'>
+
 						<input
 							type="text"
 							name="colonia"
 							value={values.colonia}
 							onChange={handleChanges}
 						/>
-					</div>
 
-					<div>
-						<label>calle:</label>
 						<input
 							type="text"
 							name="calle"
@@ -211,18 +202,15 @@ export const EditarPacienteModal = ({ paciente, setPaciente, setShowModal }) => 
 						/>
 					</div>
 
-					<div>
-						<label>numero:</label>
+					<div className='a'>
+
 						<input
-							type="number"
+							type="text"
 							name="numero"
 							value={values.numero}
 							onChange={handleChanges}
 						/>
-					</div>
 
-					<div>
-						<label>cp:</label>
 						<input
 							type="number"
 							name="cp"
@@ -230,11 +218,8 @@ export const EditarPacienteModal = ({ paciente, setPaciente, setShowModal }) => 
 							onChange={handleChanges}
 						/>
 					</div>
-				</div>
 				<IonButton onClick={actualizar}>actualizar</IonButton>
 			</form>
-
-			<IonButton onClick={() => setShowModal(false)}>cerrar</IonButton>
 		</>
 	)
 }
