@@ -76,14 +76,14 @@ export const HistoriaClinica = () => {
                         </div>
                             <img src={flecha} alt="" />
                     </a>
-                    <a href={`/historiaclinica/${pacienteId}/6`}>
+                    <a href={`/historiaclinica/${pacienteId}/7`}>
                         <div>
                             <img src={trata} alt="" />
                             <p>Tratamientos Realizados</p>
                         </div>
                             <img src={flecha} alt="" />
                     </a>
-                    <a href={`/historiaclinica/${pacienteId}/7`}>
+                    <a href={`/historiaclinica/${pacienteId}/8`}>
                         <div>
                             <img src={ficha} alt="" />
                             <p>Interrogatorio por Aparatos y Sistemas</p>

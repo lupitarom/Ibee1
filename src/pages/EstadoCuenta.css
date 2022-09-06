@@ -1,8 +1,8 @@
 .estadoCuenta{
-    width: 100%;
+    width: 100%
 }
 .estadoCuenta .contenido{
-    width: 90%;
+    max-width: 100%;
 }
 .estadoCuenta .contenido p{
     display: flex;
@@ -36,7 +36,7 @@
     align-items: center;
     justify-content: space-between;
 }
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 360px){
     .estadoCuenta .contenido{
         width: 60%;
         margin: 0 auto;
