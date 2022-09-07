@@ -54,7 +54,7 @@
 .infoPersonal .datos p, .infoEconomica .datosMovil p {
     width: 100%;
     margin: 5px 0;
-
+    display: flex;
     justify-content: space-between;
 }
 
@@ -65,7 +65,7 @@
 .infoEconomica {
     padding: 5px;
     width: 100%;
-    height: 85vh;
+    height: 50vh;
     overflow-y: scroll;
 }
 
@@ -118,6 +118,7 @@ form::-webkit-scrollbar-thumb {
     border: none;
     width: 75%;
     border-bottom: solid 3px var(--azulClaro);
+    background-color: white;
 }
 
 .infoEconomica .menu button:last-child {
@@ -139,7 +140,7 @@ form::-webkit-scrollbar-thumb {
 }
 
 .contenedorPagos .infoEconomica .tabla table {
-    background-color: white;
+    background-color: var(--azulClaro);
     border: solid 1px var(--azulClaro);
     max-height: 30vh;
     width: calc(80vw - 35vw);
@@ -154,11 +155,11 @@ form::-webkit-scrollbar-thumb {
 }
 
 .contenedorPagos .infoEconomica .tabla table tr th {
-    text-align: start;
+    text-align: center;
 }
 
 .contenedorPagos .infoEconomica .tabla table tr {
-    border-bottom: solid 1px var(--azulClaro);
+    border-bottom: solid 3px var(--azulClaro);
 }
 
 @media only screen and (max-width: 768px) {
@@ -172,7 +173,7 @@ form::-webkit-scrollbar-thumb {
         width: 768px;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-        border-bottom: solid 1px var(--azulClaro);
+
     }
 }
 
@@ -200,8 +201,9 @@ form::-webkit-scrollbar-thumb {
 
 .contenedorPagos input {
     width: 100%;
-    
-
+    background-color: var(--azulClaro);
+    border-color: aliceblue;
+    text-align: center;
 }
 
 .btn-guardar {
