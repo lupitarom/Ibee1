@@ -38,9 +38,9 @@ export const Header = () => {
                     </div>
                 </a>
             </div>
-                
-                    <div className="usuario"></div>
-                
+
+            <div className="usuario">
             </div>
+        </div>
     )
 }

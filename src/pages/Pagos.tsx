@@ -80,28 +80,28 @@ export const Pagos = () => {
                     </div>
 
                     <div className="datos">
-                        <p className="nombre"><label>Nombre:</label> <label>{paciente.nombre} {paciente.ap_paterno} {paciente.ap_materno}</label></p>
-                        <p><label>Edad: </label><label>{paciente.edad}</label></p>
-                        <p><label>RFC: </label><label> {paciente.rfc} </label></p>
-                        <p><label>Direccion:</label><label>{paciente.estado}, {paciente.ciudad}, {paciente.colonia}, {paciente.calle}, {paciente.numero}</label></p>
-                        <p><label>Telefono:</label><label>{paciente.telefono}</label></p>
-                        <p><label>Tutor:</label><label>{paciente.tutor?.nombre}</label></p>
+                        <p className="nombre"><label><b>Nombre:</b> </label> <label>{paciente.nombre} {paciente.ap_paterno} {paciente.ap_materno}</label></p>
+                        <p><label><b>Edad: </b> </label><label>{paciente.edad}</label></p>
+                        <p><label><b>RFC:</b>  </label><label> {paciente.rfc} </label></p>
+                        <p><label><b>Direccion:</b> </label><label>{paciente.estado}, {paciente.ciudad}, {paciente.colonia}, {paciente.calle}, {paciente.numero}</label></p>
+                        <p><label><b>Telefono:</b> </label><label>{paciente.telefono}</label></p>
+                        <p><label><b>Tutor:</b> </label><label>{paciente.tutor?.nombre}</label></p>
                     </div>
                 </div>
 
                 <div className="infoEconomica">
 
                     <div className="datosMovil">
-                        <p className="nombre"><label>Nombre:</label> <label>{paciente.nombre} {paciente.ap_paterno} {paciente.ap_materno}</label></p>
-                        <p><label>Edad: </label><label>{paciente.edad}</label></p>
-                        <p><label>RFC: </label><label> {paciente.rfc} </label></p>
-                        <p><label>Direccion:</label><label>{paciente.estado}, {paciente.ciudad}, {paciente.colonia}, {paciente.calle}, {paciente.numero}</label></p>
-                        <p><label>Telefono:</label><label>{paciente.telefono}</label></p>
-                        <p><label>Tutor:</label><label>{paciente.tutor?.nombre}</label></p>
+                        <p className="nombre"><label><b>Nombre:</b> </label> <label>{paciente.nombre} {paciente.ap_paterno} {paciente.ap_materno}</label></p>
+                        <p><label><b>Edad:</b>  </label><label>{paciente.edad}</label></p>
+                        <p><label><b>RFC:</b>  </label><label> {paciente.rfc} </label></p>
+                        <p><label><b>Direccion:</b> </label><label>{paciente.estado}, {paciente.ciudad}, {paciente.colonia}, {paciente.calle}, {paciente.numero}</label></p>
+                        <p><label><b>Telefono:</b> </label><label>{paciente.telefono}</label></p>
+                        <p><label><b>Tutor:</b> </label><label>{paciente.tutor?.nombre}</label></p>
                     </div>
                     <div className="menu">
                         <button onClick={postHistorialPagos}>+</button>
-                        <input type="text" />
+                        <input className='buscar' type="text" />
                         <button><img src={lupita} alt="paciente" /></button>
                     </div>
                     {

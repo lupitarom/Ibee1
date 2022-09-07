@@ -90,6 +90,7 @@ export const AgregarCitaModal = ({ fecha, hora, hora2, consultorio, setShowModal
 
     return (
         <div>
+            <button className="boton-x" onClick={() => setShowModal(false)}>x</button>
             <div className="contenedorPacientes">
 
                 <div className="contenido">
@@ -152,7 +153,7 @@ export const AgregarCitaModal = ({ fecha, hora, hora2, consultorio, setShowModal
 
                                         <input type="text"
                                             autoComplete="off"
-                                            placeholder="Asusto"
+                                            placeholder="Asunto"
                                             name="asunto"
                                             value={infoCita.asunto}
                                             onChange={(e) => setInfoCita({ ...infoCita, asunto: e.target.value })}
@@ -234,13 +235,6 @@ export const AgregarCitaModal = ({ fecha, hora, hora2, consultorio, setShowModal
                                             >
                                                 {/* <img src={guardar} alt="" /> */}
                                                 <p>Guardar</p>
-                                            </button>
-                                            <button 
-                                                className="btnCerrar"
-                                                onClick={()=>setShowModal(false)}
-                                            >
-                                                {/* <img src={guardar} alt="" /> */}
-                                                <p>Cerrar</p>
                                             </button>
                                         </div>
                                     </form>
