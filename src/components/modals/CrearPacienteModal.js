@@ -117,16 +117,46 @@ export const CrearPacienteModal = ({ setShowModal }) => {
 			</div>
 			<form className="form-container">
                     <div className='a'>
-					<input placeholder="Nombre" />
-                    <input placeholder="Apellido Paterno" />
+					<input 
+					type="text"
+					name='nombre'
+					value={values.nombre}
+					onChange={handleChanges}
+					placeholder="Nombre" />
+                    <input 
+					type="text"
+					name='ap_paterno'
+					value={values.ap_paterno}
+					onChange={handleChanges}
+					placeholder="Apellido Paterno" />
                     </div>
 					<div className='a'>
-                    <input placeholder="Apellido Materno" />
-					<input placeholder="Telefono" />
+                    <input 
+					type="text"
+					name='ap_materno'
+					value={values.ap_materno}
+					onChange={handleChanges}
+					placeholder="Apellido Materno" />
+					<input 
+					type="text"
+					name='telefono'
+					value={values.telefono}
+					onChange={handleChanges}
+					placeholder="Telefono" />
                     </div>
 					<div className='b'>
-                    <input className='c' placeholder="RFC" />
-					<input className='d' placeholder="Edad" />
+                    <input className='c' 
+					type="text"
+					name='rfc'
+					value={values.rfc}
+					onChange={handleChanges}
+					placeholder="RFC" />
+					<input className='d' 
+					type="text"
+					name='edad'
+					value={values.edad}
+					onChange={handleChanges}
+					placeholder="Edad" />
                     </div>
 					<div className='a'>
                     <select
@@ -138,15 +168,40 @@ export const CrearPacienteModal = ({ setShowModal }) => {
 								<option value={estado}>{estado}</option>
 							))}
 						</select>
-					<input placeholder="cuidad" />
+					<input 
+					type="text"
+					name='ciudad'
+					value={values.ciudad}
+					onChange={handleChanges}
+					placeholder="ciudad" />
                     </div>
 					<div className='a'>
-                    <input placeholder="Colonia" />
-					<input placeholder="Calle" />
+                    <input 
+					type="text"
+					name='colonia'
+					value={values.colonia}
+					onChange={handleChanges}
+					placeholder="Colonia" />
+					<input 
+					type="text"
+					name='calle'
+					value={values.calle}
+					onChange={handleChanges}
+					placeholder="Calle" />
                     </div>
 					<div className='a'>
-                    <input placeholder="Número" />
-					<input placeholder="CP" />
+                    <input 
+					type="text"
+					name='numero'
+					value={values.numero}
+					onChange={handleChanges}
+					placeholder="Número" />
+					<input 
+					type="text"
+					name='cp'
+					value={values.cp}
+					onChange={handleChanges}
+					placeholder="CP" />
                     </div>
 				<IonButton onClick={crear}>Crear</IonButton>
 			</form>

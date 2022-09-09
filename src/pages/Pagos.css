@@ -54,7 +54,6 @@
 .infoPersonal .datos p, .infoEconomica .datosMovil p {
     width: 100%;
     margin: 5px 0;
-    display: flex;
     justify-content: space-between;
 }
 

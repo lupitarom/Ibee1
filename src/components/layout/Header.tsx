@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ibeeBlanco from '../../assets/img/ibee assistant logo.svg'
 import userImage from '../../assets/img/woman-gfec6923be_640.jpg'
 import imgAgenda from '../../assets/img/agenda B.svg'
@@ -6,7 +6,10 @@ import imgPacientes from '../../assets/img/pacientes B.svg'
 import imgHistoria from '../../assets/img/historial.svg'
 import imgMas from '../../assets/img/más.svg'
 import { useLocation } from 'react-router'
+import '../layout/Header.css'
+import {TriangleDownIcon} from '@primer/octicons-react';
 export const Header = () => {
+
 
     const location = useLocation();
     const { pathname } = location;
@@ -16,7 +19,7 @@ export const Header = () => {
         localStorage.removeItem('user')
         window.location.reload()
     }
-
+    
     return (
         <div className="headerPacientes">
             <a href="/Agenda" className="centro">
@@ -40,7 +43,17 @@ export const Header = () => {
             </div>
 
             <div className="usuario">
+            <ul className='nav'>
+
+                <li className='trianguloU'> <a><TriangleDownIcon size={25} /></a>
+
+                <ul>
+                    < li className='cerrarSesion'><a href='/Login'>Cerrar Sesión</a></li>
+                </ul>
+                </li>
+                
+            </ul>
             </div>
-        </div>
+    </div>
     )
 }
