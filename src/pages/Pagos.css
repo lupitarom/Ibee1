@@ -54,7 +54,7 @@
 .infoPersonal .datos p, .infoEconomica .datosMovil p {
     width: 100%;
     margin: 5px 0;
-
+    justify-content: space-between;
 }
 
 .infoPersonal .datos p label:last-of-type, .infoEconomica .datosMovil p:last-ch {

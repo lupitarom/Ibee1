@@ -18,7 +18,7 @@ button {
     width: 100%;
     text-align: center;
     padding-bottom: 1px;
-    padding-top: 10px;
+    padding-top: 25px;
     box-shadow: 0px 1px 15px 1px rgba(0, 0, 0, 0.473);
     color: white;
     display: flex;
@@ -44,8 +44,8 @@ button {
 }
 
 .barHeader a img {
-    width: 2.2rem;
-    height: 2.2rem;
+    width: 2rem;
+    height: 2rem;
     margin: 0 auto;
 }
 
@@ -68,19 +68,21 @@ button {
 @media only screen and (min-width: 600px) {
     .headerPacientes .logo {
         width: 26%;
+        
     }
 }
 .headerPacientes .usuario {
-    height: 3.5rem;
-    width: 3.5rem;
+    height: 3rem;
+    width: 3rem;
     border-radius: 100px;
     background-image: url(../../assets/img/woman-gfec6923be_640.jpg);
-    display: inline-block;
+
     background-size: cover;
     position: absolute;
-    margin: 0;
-    top: .5rem;
-    right: 20px;
+    margin: 10px;
+    top: 10px;
+    right: 30px;
+
 }
 
 @media only screen and (min-width: 768px) {
@@ -107,7 +109,6 @@ button {
         top: 15px;
     }
 }
-
 
 .headerPacientes p {
     margin: 0 auto 10px auto;
