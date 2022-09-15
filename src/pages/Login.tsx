@@ -9,9 +9,11 @@ import gif from '../assets/img/ibee-inicio.gif'
 import { useHistory } from 'react-router';
 import axios from 'axios';
 import toast from 'react-hot-toast';
-
+import { IonModal } from '@ionic/react';
+import { Registrar } from '../components/modals/Registrar';
 const Login: React.FC = () => {
 
+  const[showModal,setShowModal]=useState(false)
   const [values, setValues] = useState({
     user: '',
     password: ''
@@ -72,6 +74,19 @@ const Login: React.FC = () => {
   return (
     <IonPage>
       <IonContent fullscreen>
+      <IonModal
+					isOpen={showModal}
+					cssClass="my-custom-class"
+					swipeToClose={true}
+					animated
+					onDidDismiss={() => {
+						setShowModal(false)
+					}}
+				>
+					<Registrar 
+            setShowModal={setShowModal}
+          />
+				</IonModal>
 
       {
         showLogo ? 
@@ -106,7 +121,7 @@ const Login: React.FC = () => {
                 />
 
               <button onClick={handleClick} >Ingresar</button>
-              <p>¿No tienes una cuenta? <a href="#">Registrate</a></p>
+              <div><p >¿No tienes una cuenta? <a onClick={ ()=> setShowModal(true) }>Registrate</a></p></div>
             </form>
 
 
