@@ -9,16 +9,21 @@ import { useState, useEffect } from 'react';
 import { Layout } from '../components/layout/Layout';
 import { sanitizeFecha } from '../calendar/utils/sanitizeFecha';
 import { config } from '../env';
+import { IonModal } from '@ionic/react'
 import {TwitterPicker,BlockPicker} from 'react-color'
 import axios from 'axios';
+import { toast } from 'react-hot-toast';
+
 
 const Agenda: React.FC = () => {
-
+    
+    const pacientesStorage = localStorage.getItem('agenda')
     const [fecha, setFecha] = useState(sanitizeFecha(new Date()));
     const [consultorios, setConsultorios] = useState<any[]>([])
     const [selectedDate, setSelectedDate] = useState(new Date().toISOString())
     const [numeroCitas, setNumeroCitas] = useState(0);
     const [clima, setClima] = useState<any>(null);
+    const [showModal, setShowModal] = useState(true)
     const [precioDolar, setPrecioDolar] = useState<any>(null)
 
     const getNumeroCitas = async() => {
@@ -67,9 +72,28 @@ const Agenda: React.FC = () => {
         setClima( data )
     }
 
+    const [values] = useState({
+		nombre: '',
+		nom_consultorio: 'Consultorio',
+        color:''
+	})
+
+    const crear = async () => {
+
+		try {
+			const {data} = await axios.post(
+				`${config.baseUrl}/api/agenda`,
+				values
+			)
+			toast.success(data.smg)
+		} catch (error) {
+			console.log(error)
+			toast.error('error al agregar consultorio')
+		}
+	}
+
     const getPrecioDolar = async() =>{
         try {
-            const fechaYYMMDD = new Date( fecha ).toISOString().split('T')[0]
             const {data} = await axios.get(`https://www.banxico.org.mx/SieAPIRest/service/v1/series/SF63528/datos/2021-12-28/2021-12-28?token=${config.banxicoApiToken}&mediaType=json`)
             setPrecioDolar( Number( data.bmx.series[0].datos[0].dato ).toFixed(2) )
         } catch (error) {
@@ -84,7 +108,7 @@ const Agenda: React.FC = () => {
                         <div className="contenido">
                             <div className="head">
                                 <h1>Mi Agenda</h1>
-                                <div className="agregar">
+                                <div className="agregar" onClick={crear}>
                                     <button>
                                         <img src={plus} alt="" />
                                     </button>
@@ -138,7 +162,7 @@ const Agenda: React.FC = () => {
                                         <a href={`/calendarioSemana/${c.id_consultorio}`}>
                                             <div className="consultorio">
                                                 <img src={consultorio} alt="" />
-                                                <p>{c.nombre}</p>
+                                                <p>Consultorio {c.id_consultorio}</p>
                                                 <div className="contador">
                                                     {c.nCitas}
                                                 </div>
