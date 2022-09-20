@@ -6,7 +6,7 @@
 }
 
 .contedorPaciente .img{
-    border-radius: 100%;
+    border-radius: 10%;
     width: 12rem;
     height: 12rem;
     background-color: tomato;
@@ -27,6 +27,8 @@
     color: var(--azulFuerte);
     font-size: 1.4rem;
     text-transform: capitalize;
+    display: flex;
+    justify-content: center;
 }
 .contedorPaciente a{
     width: 90%;
@@ -74,3 +76,11 @@
     width: 2.4rem;
     margin: auto 20px;
 }
+ .contedorPaciente .editar button{
+   color: var(--azulFuerte);
+   padding: 10px;
+   margin-left: 100%;
+   margin-top: 78%;
+   margin-right: 10px;
+}
+    

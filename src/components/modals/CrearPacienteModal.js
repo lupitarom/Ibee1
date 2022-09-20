@@ -142,7 +142,21 @@ export const CrearPacienteModal = ({ setShowModal }) => {
 					name='telefono'
 					value={values.telefono}
 					onChange={handleChanges}
-					placeholder="Telefono" />
+					placeholder="Telefono fijo" />
+                    </div>
+					<div className='a'>
+                    <input 
+					type="text"
+					name='ap_materno'
+					value={values.ap_materno}
+					onChange={handleChanges}
+					placeholder="Numero Celular" />
+					<input 
+					type="text"
+					name='telefono'
+					value={values.telefono}
+					onChange={handleChanges}
+					placeholder="Facturación" />
                     </div>
 					<div className='b'>
                     <input className='c' 

@@ -4,13 +4,35 @@
     text-align: center;
 }
 
+.form-container2{
+    padding: 2rem;
+    text-align: center;
+
+}
+
+.AgregarCons{
+    text-align: center;
+    color: var(--azulFuerte);
+    font-weight: bold;
+}
+
+.form-container2 input{
+    width: 70%; 
+    margin: 5px 10px 5px 0;
+    text-align: center;
+    min-height: 2.5rem;
+    border: none;
+    background-color: var(--azulClaro);
+    border-radius: 10px;
+}
+
 .form-container label{
     width: 22%;
     margin-right: 5px;
 }
 
 .form-container input{
-    width: 70%;
+    width: 70%; 
     margin: 5px 10px 5px 0;
     text-align: center;
     min-height: 2.5rem;
@@ -83,7 +105,7 @@ h1{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    border-radius: 50%;
+    border-radius: 10%;
     height: 200px;
     width: 200px;
 }

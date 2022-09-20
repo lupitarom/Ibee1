@@ -28,9 +28,9 @@ const handleChanges = (e) => {
     return (
 		<>
 		<button className="boton-x" onClick={() => setShowModal(false)}>x</button>
-		<p className='ibee'>Ibee</p>
-		<h3 className='CrearUsuario'>Crear nuevo usuario</h3>
         <div className='conWrap'>
+		<div className='ibee'></div>
+		<h3 className='CrearUsuario'>Crear nuevo usuario</h3>
 			
 		
 			<form className="form-container1">
@@ -40,7 +40,7 @@ const handleChanges = (e) => {
 					name='nombre'
 					value={values.nombre}
 					onChange={handleChanges}
-					placeholder="Nombre" />   
+					placeholder="Nombre (s)" />   
                     </div>
                     <div className='b'>
                     <input 
@@ -48,7 +48,7 @@ const handleChanges = (e) => {
 					name='ap_paterno'
 					value={values.ap_paterno}
 					onChange={handleChanges}
-					placeholder="Apellido paterno" />
+					placeholder="Apellidos" />
                     </div>
 					<div className='b'>
 					<input 
@@ -56,7 +56,7 @@ const handleChanges = (e) => {
 					name='ap_materno'
 					value={values.ap_materno}
 					onChange={handleChanges}
-					placeholder="Apellido paterno" />   
+					placeholder="correo electronico" />   
                     </div>
                     <div className='b'>
                     <input 

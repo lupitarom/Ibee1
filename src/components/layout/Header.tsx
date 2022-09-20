@@ -41,7 +41,7 @@ export const Header = () => {
                     </div>
                 </a>
             </div>
-
+            
             <div className="usuario">
             <ul className='nav'>
 
@@ -55,5 +55,6 @@ export const Header = () => {
             </ul>
             </div>
     </div>
+
     )
 }

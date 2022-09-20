@@ -15,6 +15,7 @@ import historia from './../assets/img/historial.svg'
 import { config } from '../env'
 import toast from 'react-hot-toast';
 import axios from 'axios';
+import {PencilIcon} from '@primer/octicons-react';
 import { EditarPacienteModal } from '../components/modals/EditarPacienteModal';
 
 const Paciente: React.FC = () => {
@@ -66,13 +67,11 @@ const Paciente: React.FC = () => {
                             <div className="contedorPaciente">
 
                                 <div className="img" style={{ backgroundImage: `url(${config.baseUrlImagenes}/${paciente.url})` }}>
-
+                                <div className='editar' onClick={()=>setShowModal(true)}><button><PencilIcon size={30} /></button></div>
                                 </div>
                                 <p>{paciente.nombre} {paciente.ap_paterno} {paciente.ap_materno}
 
-                                    <IonButton
-                                        onClick={ ()=> setShowModal(true) }
-                                    >Editar</IonButton>
+                                    
                                 </p>
                                 <a href="">
                                     <div><img src={iconTratamiento} alt="" />
