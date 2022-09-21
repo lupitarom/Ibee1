@@ -61,7 +61,7 @@
     border-radius: 10px;
     color: rgb(126, 124, 124);
 }
-label{
+.form-container .datos{
     color: var(--azulFuerte);
     font-weight: bold;
 }
