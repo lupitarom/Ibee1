@@ -116,7 +116,7 @@ export const CrearPacienteModal = ({ setShowModal }) => {
 				</button>
 			</div>
 			<form className="form-container">
-				<label>DATOS PERSONALES</label>
+				<div className='datos'><label>DATOS PERSONALES</label></div>
                     <div className='b'>
 					<input 
 					type="text"
@@ -207,7 +207,7 @@ export const CrearPacienteModal = ({ setShowModal }) => {
 					placeholder="CP" />
                     </div>
 					<div>
-					<label>DATOS FISCALES</label>
+					<div className='datos'><label>DATOS FISCALES</label></div>
 					<div className='b'>
 					<input 
 					type="text"
