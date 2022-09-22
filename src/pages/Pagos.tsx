@@ -25,6 +25,7 @@ export const Pagos = () => {
         estado: '',
         numero: '',
         telefono: '',
+        Whatsapp:'',
         tutor: ''
     })
     const [historialPagos, setHistorialPagos] = useState<any>([]);
@@ -86,13 +87,9 @@ export const Pagos = () => {
                         <p><label><b>RFC:</b> </label><label> {paciente.rfc} </label></p>
                         <p><label><b>Direccion:</b></label><label>{paciente.estado}, {paciente.ciudad}, {paciente.colonia}, {paciente.calle}, {paciente.numero}</label></p>
                         <p><label><b>Telefono:</b></label><label>{paciente.telefono}</label></p>
+                        <p><label><b>Whatsapp: </b></label><label>{paciente.Whatsapp}</label></p>
                         <p><label><b>Tutor:</b></label><label>{paciente.tutor?.nombre}</label></p>
-                        <p className="nombre"><label><b>Nombre:</b> </label> <label>{paciente.nombre} {paciente.ap_paterno} {paciente.ap_materno}</label></p>
-                        <p><label><b>Edad: </b> </label><label>{paciente.edad}</label></p>
-                        <p><label><b>RFC:</b>  </label><label> {paciente.rfc} </label></p>
-                        <p><label><b>Direccion:</b> </label><label>{paciente.estado}, {paciente.ciudad}, {paciente.colonia}, {paciente.calle}, {paciente.numero}</label></p>
-                        <p><label><b>Telefono:</b> </label><label>{paciente.telefono}</label></p>
-                        <p><label><b>Tutor:</b> </label><label>{paciente.tutor?.nombre}</label></p>
+
 
                     </div>
                 </div>

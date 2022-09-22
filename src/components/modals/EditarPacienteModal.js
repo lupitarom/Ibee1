@@ -6,40 +6,9 @@ import { Camera, CameraResultType } from '@capacitor/camera'
 import './editarPacienteModal.css'
 import axios from 'axios'
 
-const estadosDeMexico = [
-	'Aguascalientes',
-	'Baja California',
-	'Baja California Sur',
-	'Campeche',
-	'Chiapas',
-	'Chihuahua',
-	'Coahuila de Zaragoza',
-	'Colima',
-	'Ciudad de México',
-	'Durango',
-	'Guanajuato',
-	'Guerrero',
-	'Hidalgo',
-	'Jalisco',
-	'Estado de Mexico',
-	'Michoacan de Ocampo',
-	'Morelos',
-	'Nayarit',
-	'Nuevo Leon',
-	'Oaxaca',
-	'Puebla',
-	'Queretaro de Arteaga',
-	'Quintana Roo',
-	'San Luis Potosi',
-	'Sinaloa',
-	'Sonora',
-	'Tabasco',
-	'Tamaulipas',
-	'Tlaxcala',
-	'Veracruz de Ignacio de la Llave',
-	'Yucatan',
-	'Zacatecas',
-]
+const estadosDeMexico = ['Aguascalientes','Baja California','Baja California Sur','Campeche','Chiapas','Chihuahua','Coahuila de Zaragoza','Colima','Ciudad de México','Durango','Guanajuato',
+	'Guerrero','Hidalgo','Jalisco','Estado de Mexico','Michoacan de Ocampo','Morelos','Nayarit','Nuevo Leon','Oaxaca','Puebla','Queretaro de Arteaga','Quintana Roo','San Luis Potosi',
+	'Sinaloa','Sonora','Tabasco','Tamaulipas','Tlaxcala','Veracruz de Ignacio de la Llave','Yucatan','Zacatecas',]
 
 export const EditarPacienteModal = ({ paciente, setPaciente, setShowModal }) => {
 	const [values, setValues] = useState({
@@ -49,7 +18,7 @@ export const EditarPacienteModal = ({ paciente, setPaciente, setShowModal }) => 
 		ap_paterno: paciente.ap_paterno,
 		rfc: paciente.rfc,
 		telefono: paciente.telefono?.telefono, // TODO
-		whatsapp: paciente.whatsapp,
+		whatsApp: paciente.whatsApp?.whatsApp,
 		edad: paciente.edad,
 		estado: paciente.estado,
 		ciudad: paciente.ciudad,
@@ -80,7 +49,7 @@ export const EditarPacienteModal = ({ paciente, setPaciente, setShowModal }) => 
 		})
 	}
 
-	const actualizar = async () => {
+	const actualizar = async () => { 
 		console.log(values)
 		try {
             await axios.put(`${config.baseUrl}/api/paciente/${paciente.id_paciente}`, values)
@@ -162,8 +131,8 @@ export const EditarPacienteModal = ({ paciente, setPaciente, setShowModal }) => 
 					<input
 						type="text"
 						name="whatsapp"
-						value={values.whatsapp}
-						placeholder='WhatsApp'
+						value={values.whatsApp}
+						placeholder='whatsApp'
 						onChange={handleChanges}
 					/>
 

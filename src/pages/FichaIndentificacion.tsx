@@ -49,6 +49,7 @@ export const FichaIndentificacion = () => {
         })
     }
 
+
     return (
         <>
             <div className="contenedorFicha">
@@ -56,7 +57,7 @@ export const FichaIndentificacion = () => {
                 <form className="nombre">
                     <label htmlFor="">Nombre:</label>
                     <div className="limpiar">
-                        <input 
+                        <input
                             className="obligatorio" 
                             type="text" 
                             placeholder="Nombre*" 
@@ -65,7 +66,7 @@ export const FichaIndentificacion = () => {
                     </div>
                     <div className="limpiar">
                     <input className="obligatorio" type="text" placeholder="Apellido Paterno*" />
-                        <button>x</button>
+                        <button >x</button>
                     </div>
                     <div className="limpiar">
                     <input className="obligatorio" type="text" placeholder="Apellido Materno*" />
