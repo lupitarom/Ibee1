@@ -32,8 +32,8 @@
 }
 
 .form-container input{
-    width: 70%; 
-    margin: 5px 10px 5px 0;
+    width: 100%; 
+    margin: 5px 5px 5px 0;
     text-align: center;
     min-height: 2.5rem;
     border: none;
@@ -41,18 +41,15 @@
     border-radius: 10px;
 }
 
+
 .form-container .a{
     display: flex; 
     justify-content: space-between;    
 }
 
-.form-container .a2{
-    display: flex; 
-    align-items: center;
-}
 
 .form-container select{
-    width: 70%;
+    width: 100%;
     margin-right: 10px;
     text-align: center;
     min-height: 2.5rem;
