@@ -40,9 +40,6 @@ const Paciente: React.FC = () => {
         }
     }
 
-    if (paciente === {}) {
-        return <h1>el paciente no existe</h1>
-    }
 
     return (
         <IonPage>

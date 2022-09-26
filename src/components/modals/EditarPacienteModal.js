@@ -18,7 +18,7 @@ export const EditarPacienteModal = ({ paciente, setPaciente, setShowModal }) => 
 		ap_paterno: paciente.ap_paterno,
 		rfc: paciente.rfc,
 		telefono: paciente.telefono?.telefono, // TODO
-		whatsApp: paciente.whatsApp?.whatsApp,
+		whatsapp: paciente.telefono?.whatsapp,
 		edad: paciente.edad,
 		estado: paciente.estado,
 		ciudad: paciente.ciudad,

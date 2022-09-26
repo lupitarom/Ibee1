@@ -51,7 +51,7 @@ export const CrearPacienteModal = ({ setShowModal }) => {
 		ap_paterno: '',
 		ap_materno: '',
 		telefono:'',
-		whatsApp:'',
+		whatsapp:'',
 		edad: '',
 		estado: '',
 		ciudad: '',
@@ -93,7 +93,7 @@ export const CrearPacienteModal = ({ setShowModal }) => {
 			toast.success('paciente creado  correctamente')
 		} catch (error) {
 			console.log(error)
-			toast.error('error actualizando paciente')
+			toast.error('error al agregar paciente')
 		}
 	}
 
@@ -161,10 +161,10 @@ export const CrearPacienteModal = ({ setShowModal }) => {
 					placeholder="Telefono fijo" />
                     <input 
 					type="text"
-					name='whatsApp'
-					value={values.whatsApp}
+					name='whatsapp'
+					value={values.whatsapp}
 					onChange={handleChanges}
-					placeholder="WhatsApp" />
+					placeholder="Whatsapp" />
 					<input 
 					type="text"
 					name='edad'
