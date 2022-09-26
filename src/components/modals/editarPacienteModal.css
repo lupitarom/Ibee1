@@ -32,7 +32,7 @@
 }
 
 .form-container input{
-    width: 100%; 
+    width: 98%; 
     margin: 5px 5px 5px 0;
     text-align: center;
     min-height: 2.5rem;
@@ -41,13 +41,28 @@
     border-radius: 10px;
 }
 
+.form-container .b{
+    margin-top: 10px;
+    background-color: var(--azulClaro);
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    width: 99%;
+}
 
 .form-container .a{
     display: flex; 
     justify-content: space-between;    
 }
-
-
+.borrar{
+    width: 1rem;
+    height: 1rem;
+    margin-right: 5px;
+    border-radius: 100px;
+    color: white;
+    background-color: var(--negroOpaco);
+    font-size: x-small;
+}
 .form-container select{
     width: 100%;
     margin-right: 10px;
@@ -57,6 +72,7 @@
     background-color: var(--azulClaro);
     border-radius: 10px;
     color: rgb(126, 124, 124);
+    margin-top: 1%;
 }
 .form-container .datos{
     color: var(--azulFuerte);

@@ -3,8 +3,9 @@ import { IonButton } from '@ionic/react'
 import React, { useState } from 'react'
 import toast from 'react-hot-toast'
 import { config } from '../../env'
+import userImage from '../../assets/img/woman-gfec6923be_640.jpg'
 import { Camera, CameraResultType } from '@capacitor/camera'
-
+import {DeviceCameraIcon} from '@primer/octicons-react';
 
 
 
@@ -13,6 +14,7 @@ const[values,setValues]=useState({
     usuario: '',
     password: ''
 })
+const [imagenPrevia, setImagenPrevia] = useState(userImage)
 
 const handleChanges = (e) => {
     setValues({
@@ -20,7 +22,19 @@ const handleChanges = (e) => {
         [e.target.name]: e.target.value,
     })
 }
-
+const takePicture = async () => {
+	try {
+		const image = await Camera.getPhoto({
+			quality: 90,
+			allowEditing: true,
+			resultType: CameraResultType.Uri,
+		})
+		var imageUrl = image.webPath
+		setImagenPrevia(imageUrl)
+	} catch (error) {
+		console.log(error)
+	}
+}
 
 
 
@@ -28,9 +42,23 @@ const handleChanges = (e) => {
     return (
 		<>
 		<button className="boton-x" onClick={() => setShowModal(false)}>x</button>
-        <div className='conWrap'>
-		<div className='ibee'></div>
-		<h3 className='CrearUsuario'>Crear nuevo usuario</h3>
+        
+		<div className='conWrap'>
+
+			<div className='ibee'></div>
+			<h3 className='CrearUsuario'>Crear usuario</h3>
+		
+		<div className="imagen-previa-container">
+				<img
+					className="imagen-previa"
+					src={imagenPrevia}
+					alt="imagen del paciente"
+				/>
+				<button className="take-button" onClick={takePicture}>
+				<DeviceCameraIcon size={20} />
+				</button>
+			</div>
+
 			
 		
 			<form className="form-container1">

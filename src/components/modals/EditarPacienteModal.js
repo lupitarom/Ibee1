@@ -110,6 +110,13 @@ export const EditarPacienteModal = ({ paciente, setPaciente, setShowModal }) => 
 			console.log(error)
 		}
 	}
+	const limpiarCampo = (e) => {
+        e.preventDefault();
+        setValues({
+            ...values,
+            [e.target.name]: ''
+        })
+	}
 
 	return (
 		<>
@@ -127,29 +134,42 @@ export const EditarPacienteModal = ({ paciente, setPaciente, setShowModal }) => 
 			</div>
 			<form className="form-container">
 				<div className='datos'><label>DATOS PERSONALES</label></div>
-					<input
-						type="text"
-						name="nombre"
-						placeholder='Nombre'
-						value={values.nombre}
-						onChange={handleChanges}
-					/>
-
-					<input
-						type="text"
-						name="ap_paterno"
-						placeholder='Apellido Paterno'
-						value={values.ap_paterno}
-						onChange={handleChanges}
-					/>
-
-					<input
-						type="text"
-						name="ap_materno"
-						placeholder='Apellido Materno'
-						value={values.ap_materno}
-						onChange={handleChanges}
-					/>
+				<div className='b'>
+					<input 
+					type="text"
+					name='nombre'
+					value={values.nombre}
+					onChange={handleChanges}
+					placeholder="Nombre" />
+					<button  className='borrar'
+					 name="nombre"
+					 onClick={limpiarCampo}
+					>x</button>
+					</div>
+					<div className='b'>
+                    <input 
+					type="text"
+					name='ap_paterno'
+					value={values.ap_paterno}
+					onChange={handleChanges}
+					placeholder="Apellido Paterno" />
+					<button className='borrar'
+					 name="ap_paterno"
+					 onClick={limpiarCampo}
+					>x</button>
+                    </div>
+					<div className='b'>
+                    <input 
+					type="text"
+					name='ap_materno'
+					value={values.ap_materno}
+					onChange={handleChanges}
+					placeholder="Apellido Materno" />
+					<button className='borrar'
+					name="ap_materno"
+					onClick={limpiarCampo}
+					>x</button>
+					</div>
 					<div className='a'>
 					<input
 						type="tel"
@@ -232,20 +252,30 @@ export const EditarPacienteModal = ({ paciente, setPaciente, setShowModal }) => 
 						/>
 					</div>
 					<div className='datos'><label>DATOS FISCALES</label></div>
-					<input
-							type="text"
-							name="regimen_fiscal"
-							value={values.regimen_fiscal}
-							placeholder='Regimen Fiscal'
-							onChange={handleChanges}
-						/>
-						<input
-							type="text"
-							name="nif"
-							value={values.nif}
-							placeholder='NIF'
-							onChange={handleChanges}
-						/>
+					<div className='b'>
+					<input 
+					type="text"
+					name='regimen_fiscal'
+					value={values._fiscal}
+					onChange={handleChanges}
+					placeholder="Regimen fiscal" />
+					<button className='borrar'
+					name="regimen_fiscal"
+					onClick={limpiarCampo}
+					>x</button>
+					</div>
+					<div className='b'>
+					<input 
+					type="text"
+					name='nif'
+					value={values.nif}
+					onChange={handleChanges}
+					placeholder="NIF" />
+					<button className='borrar'
+					name="nif"
+					onClick={limpiarCampo}
+					>x</button>
+					</div>
 						<div className='a'>
 						<input
 							type="text"
@@ -262,13 +292,18 @@ export const EditarPacienteModal = ({ paciente, setPaciente, setShowModal }) => 
 							onChange={handleChanges}
 						/>
 						</div>
-						<input
-							type="text"
-							name="correo"
-							value={values.correo}
-							placeholder='Correo Electrónico'
-							onChange={handleChanges}
-						/>
+						<div className='b'>
+					<input 
+					type="text"
+					name='correo'
+					value={values.correo}
+					onChange={handleChanges}
+					placeholder="Correo electronico" />
+					<button className='borrar'
+					name="correo"
+					onClick={limpiarCampo}
+					>x</button>
+					</div>
 						<div className='a'>
 
 						<select 
