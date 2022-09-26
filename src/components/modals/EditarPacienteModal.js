@@ -49,6 +49,7 @@ export const EditarPacienteModal = ({ paciente, setPaciente, setShowModal }) => 
 		ap_paterno: paciente.ap_paterno,
 		rfc: paciente.rfc,
 		telefono: paciente.telefono?.telefono, // TODO
+		whatsapp: paciente.whatsapp,
 		edad: paciente.edad,
 		estado: paciente.estado,
 		ciudad: paciente.ciudad,
@@ -56,6 +57,16 @@ export const EditarPacienteModal = ({ paciente, setPaciente, setShowModal }) => 
 		calle: paciente.calle,
 		numero: paciente.numero,
 		cp: paciente.cp,
+		regimen_fiscal: paciente.regimen_fiscal,
+		nif:paciente.nif,
+		razon_social:paciente.razon_social,
+		correo:paciente.correo,
+		estado2: paciente.estado2,
+		ciudad2: paciente.ciudad2,
+		colonia2: paciente.colonia2,
+		calle2: paciente.calle2,
+		numero2: paciente.numero2,
+		cp2: paciente.cp2,
 	})
 
 	const [imagenPreview, setImagenPreview] = useState(
@@ -115,10 +126,11 @@ export const EditarPacienteModal = ({ paciente, setPaciente, setShowModal }) => 
 				</button>
 			</div>
 			<form className="form-container">
-				<div className='a'>
+				<div className='datos'><label>DATOS PERSONALES</label></div>
 					<input
 						type="text"
 						name="nombre"
+						placeholder='Nombre'
 						value={values.nombre}
 						onChange={handleChanges}
 					/>
@@ -126,44 +138,43 @@ export const EditarPacienteModal = ({ paciente, setPaciente, setShowModal }) => 
 					<input
 						type="text"
 						name="ap_paterno"
+						placeholder='Apellido Paterno'
 						value={values.ap_paterno}
 						onChange={handleChanges}
 					/>
-				</div>
-				<div className='a'>
+
 					<input
 						type="text"
 						name="ap_materno"
+						placeholder='Apellido Materno'
 						value={values.ap_materno}
 						onChange={handleChanges}
 					/>
+					<div className='a'>
 					<input
 						type="tel"
 						name="telefono"
+						placeholder='Teléfono'
 						value={values.telefono}
 						onChange={handleChanges}
 					/>
-				</div>
 
-				<div className='b'>
-					<div className='c'>
 					<input
 						type="text"
-						name="rfc"
-						value={values.rfc}
+						name="whatsapp"
+						value={values.whatsapp}
+						placeholder='WhatsApp'
 						onChange={handleChanges}
 					/>
-					</div>
-					<div className='d'>
-					<input
+
+						<input
 						type="text"
 						name="edad"
 						value={values.edad}
+						placeholder='Edad'
 						onChange={handleChanges}
 					/>
 					</div>
-					</div>
-
 					<div className='a'>
 
 						<select 
@@ -181,6 +192,7 @@ export const EditarPacienteModal = ({ paciente, setPaciente, setShowModal }) => 
 							type="text"
 							name="ciudad"
 							value={values.ciudad}
+							placeholder='Ciudad'
 							onChange={handleChanges}
 						/>
 						</div>
@@ -191,6 +203,7 @@ export const EditarPacienteModal = ({ paciente, setPaciente, setShowModal }) => 
 							type="text"
 							name="colonia"
 							value={values.colonia}
+							placeholder='Colonia'
 							onChange={handleChanges}
 						/>
 
@@ -198,23 +211,117 @@ export const EditarPacienteModal = ({ paciente, setPaciente, setShowModal }) => 
 							type="text"
 							name="calle"
 							value={values.calle}
+							placeholder='Calle'
 							onChange={handleChanges}
 						/>
 					</div>
+					<div className='a'>
+						<input
+							type="number"
+							name="numero"
+							value={values.numero}
+							placeholder='Número'
+							onChange={handleChanges}
+						/>
+						<input
+							type="number"
+							name="cp"
+							value={values.cp}
+							placeholder='Código Postal'
+							onChange={handleChanges}
+						/>
+					</div>
+					<div className='datos'><label>DATOS FISCALES</label></div>
+					<input
+							type="text"
+							name="regimen_fiscal"
+							value={values.regimen_fiscal}
+							placeholder='Regimen Fiscal'
+							onChange={handleChanges}
+						/>
+						<input
+							type="text"
+							name="nif"
+							value={values.nif}
+							placeholder='NIF'
+							onChange={handleChanges}
+						/>
+						<div className='a'>
+						<input
+							type="text"
+							name="rfc"
+							value={values.rfc}
+							placeholder='RFC'
+							onChange={handleChanges}
+						/>
+						<input
+							type="text"
+							name="razon_social"
+							value={values.razon_social}
+							placeholder='Razón Social'
+							onChange={handleChanges}
+						/>
+						</div>
+						<input
+							type="text"
+							name="correo"
+							value={values.correo}
+							placeholder='Correo Electrónico'
+							onChange={handleChanges}
+						/>
+						<div className='a'>
+
+						<select 
+                            name="estado2"
+                            value={values.estado2}
+                            onChange={handleChanges}
+                            >
+							{estadosDeMexico.map((estado2) => (
+								<option 
+                                    value={estado2}>{estado2}</option>
+							))}
+						</select>
+
+						<input
+							type="text"
+							name="ciudad2"
+							value={values.ciudad2}
+							placeholder='Ciudad'
+							onChange={handleChanges}
+						/>
+						</div>
 
 					<div className='a'>
 
 						<input
 							type="text"
-							name="numero"
-							value={values.numero}
+							name="colonia2"
+							value={values.colonia2}
+							placeholder='Colonia'
 							onChange={handleChanges}
 						/>
 
 						<input
+							type="text"
+							name="calle2"
+							value={values.calle2}
+							placeholder='Calle'
+							onChange={handleChanges}
+						/>
+					</div>
+					<div className='a'>
+						<input
 							type="number"
-							name="cp"
-							value={values.cp}
+							name="numero2"
+							value={values.numero2}
+							placeholder='Número'
+							onChange={handleChanges}
+						/>
+						<input
+							type="number"
+							name="cp2"
+							value={values.cp2}
+							placeholder='Código Postal'
 							onChange={handleChanges}
 						/>
 					</div>

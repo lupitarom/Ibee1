@@ -116,13 +116,16 @@ export const CrearPacienteModal = ({ setShowModal }) => {
 				</button>
 			</div>
 			<form className="form-container">
-                    <div className='a'>
+				<div className='datos'><label>DATOS PERSONALES</label></div>
+                    <div className='b'>
 					<input 
 					type="text"
 					name='nombre'
 					value={values.nombre}
 					onChange={handleChanges}
 					placeholder="Nombre" />
+					</div>
+					<div className='b'>
                     <input 
 					type="text"
 					name='ap_paterno'
@@ -130,48 +133,119 @@ export const CrearPacienteModal = ({ setShowModal }) => {
 					onChange={handleChanges}
 					placeholder="Apellido Paterno" />
                     </div>
-					<div className='a'>
+					<div className='b'>
                     <input 
 					type="text"
 					name='ap_materno'
 					value={values.ap_materno}
 					onChange={handleChanges}
 					placeholder="Apellido Materno" />
+					</div>
+					<div className='a'>
 					<input 
 					type="text"
 					name='telefono'
 					value={values.telefono}
 					onChange={handleChanges}
 					placeholder="Telefono fijo" />
-                    </div>
-					<div className='a'>
                     <input 
 					type="text"
-					name='ap_materno'
-					value={values.ap_materno}
+					name='whatsApp'
+					value={values.whatsApp}
 					onChange={handleChanges}
-					placeholder="Numero Celular" />
+					placeholder="WhatsApp" />
 					<input 
-					type="text"
-					name='telefono'
-					value={values.telefono}
-					onChange={handleChanges}
-					placeholder="Facturación" />
-                    </div>
-					<div className='b'>
-                    <input className='c' 
-					type="text"
-					name='rfc'
-					value={values.rfc}
-					onChange={handleChanges}
-					placeholder="RFC" />
-					<input className='d' 
 					type="text"
 					name='edad'
 					value={values.edad}
 					onChange={handleChanges}
 					placeholder="Edad" />
                     </div>
+					<div className='a'>
+                    <select
+							name="estado1"
+							value={values.estado1}
+							onChange={handleChanges}
+						>
+							{estadosDeMexico.map((estado) => (
+								<option value={estado}>{estado}</option>
+							))}
+						</select>
+					<input 
+					type="text"
+					name='ciudad1'
+					value={values.ciudad1}
+					onChange={handleChanges}
+					placeholder="ciudad" />
+                    </div>
+					<div className='a'>
+                    <input 
+					type="text"
+					name='colonia1'
+					value={values.colonia1}
+					onChange={handleChanges}
+					placeholder="Colonia" />
+					<input 
+					type="text"
+					name='calle1'
+					value={values.calle1}
+					onChange={handleChanges}
+					placeholder="Calle" />
+                    </div>
+					<div className='a'>
+                    <input 
+					type="text"
+					name='numero1'
+					value={values.numero1}
+					onChange={handleChanges}
+					placeholder="Número" />
+					<input 
+					type="text"
+					name='cp1'
+					value={values.cp1}
+					onChange={handleChanges}
+					placeholder="CP" />
+                    </div>
+					<div>
+					<div className='datos'><label>DATOS FISCALES</label></div>
+					<div className='b'>
+					<input 
+					type="text"
+					name='regimen'
+					value={values.regimen}
+					onChange={handleChanges}
+					placeholder="Regimen fiscal" />
+					</div>
+					<div className='b'>
+					<input 
+					type="text"
+					name='NIF'
+					value={values.nif}
+					onChange={handleChanges}
+					placeholder="NIF" />
+					</div>
+					<div className='a'>
+					<input 
+					type="text"
+					name='rfc'
+					value={values.rfc}
+					onChange={handleChanges}
+					placeholder="RFC" />
+                    <input 
+					type="text"
+					name='razon'
+					value={values.razon}
+					onChange={handleChanges}
+					placeholder="Razon social" />
+					</div>
+					<div className='b'>
+					<input 
+					type="text"
+					name='correo'
+					value={values.correo}
+					onChange={handleChanges}
+					placeholder="Correo electronico" />
+					</div>
 					<div className='a'>
                     <select
 							name="estado"
@@ -217,6 +291,7 @@ export const CrearPacienteModal = ({ setShowModal }) => {
 					onChange={handleChanges}
 					placeholder="CP" />
                     </div>
+					</div>
 				<IonButton onClick={crear}>Crear</IonButton>
 			</form>
 			
