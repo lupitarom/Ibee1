@@ -48,8 +48,18 @@ export const FichaIndentificacion = () => {
             [e.target.name]: e.target.value
         })
     }
+<<<<<<< HEAD
 
 
+=======
+    const limpiarCampo = (e: any) => {
+        e.preventDefault();
+        setValues({
+            ...values,
+            [e.target.name]: ''
+        })
+	}
+>>>>>>> 69e7193e0506f8f230c69f4b38274caaa17eb56b
     return (
         <>
             <div className="contenedorFicha">
@@ -60,9 +70,13 @@ export const FichaIndentificacion = () => {
                         <input
                             className="obligatorio" 
                             type="text" 
+                            name= "nombre"
                             placeholder="Nombre*" 
                             />
-                        <button>x</button>
+                        <button
+                        name="nombre"
+                        onClick={limpiarCampo}
+                        >x</button>
                     </div>
                     <div className="limpiar">
                     <input className="obligatorio" type="text" placeholder="Apellido Paterno*" />
