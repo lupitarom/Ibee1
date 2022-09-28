@@ -44,6 +44,108 @@ h3{
     background-image: url(../../assets/img/LOGO.png);
     background-size: cover;
     margin: auto;
+}
+.imagen-previa-container{
+    position: relative;
+}
+.imagen-previa{
+    display: block;
+    margin-left: 240px;
+    margin-right: auto;
+    border-radius: 10%;
+    height: 100px;
+    width: 100px;
+}
+.take-button{
+    position: absolute;
+    color: var(--azulFuerte);
+    width: 0;
+    left: 340px;
+    top: 78px;
+}
+@media only screen and (max-width: 360px) {
+    .imagen-previa{
+        display: block;
+        margin-left: 120px;
+        margin-right: auto;
+        border-radius: 10%;
+        height: 100px;
+        width: 100px;
+    }
+    .take-button{
+        position: absolute;
+        color: var(--azulFuerte);
+        width: 0;
+        left: 220px;
+        top: 78px;
+    }
+}
+@media only screen and (min-width: 361px) and (max-width: 380px) {
+    .imagen-previa{
+        display: block;
+        margin-left: 110px;
+        margin-right: auto;
+        border-radius: 10%;
+        height: 100px;
+        width: 100px;
+    }
+    .take-button{
+        position: absolute;
+        color: var(--azulFuerte);
+        width: 0;
+        left: 210px;
+        top: 78px;
+    }
+}
+@media only screen and (min-width: 381px) and (max-width: 415px) {
+    .imagen-previa{
+        display: block;
+        margin-left: 120px;
+        margin-right: auto;
+        border-radius: 10%;
+        height: 100px;
+        width: 100px;
+    }
+    .take-button{
+        position: absolute;
+        color: var(--azulFuerte);
+        width: 0;
+        left: 220px;
+        top: 78px;
+    }
+}
+@media only screen and (min-width: 281px) and (max-width: 320px) {
+    .imagen-previa{
+        display: block;
+        margin-left: 100px;
+        margin-right: auto;
+        border-radius: 10%;
+        height: 100px;
+        width: 100px;
+    }
+    .take-button{
+        position: absolute;
+        color: var(--azulFuerte);
+        width: 0;
+        left: 200px;
+        top: 78px;
+    }
+}
 
-
+@media only screen and (max-width: 280px) {
+    .imagen-previa{
+        display: block;
+        margin-left: 90px;
+        margin-right: auto;
+        border-radius: 10%;
+        height: 100px;
+        width: 100px;
+    }
+    .take-button{
+        position: absolute;
+        color: var(--azulFuerte);
+        width: 0;
+        left: 190px;
+        top: 78px;
+    }
 }

@@ -73,9 +73,7 @@ const Agenda: React.FC = () => {
     }
 
     const [values] = useState({
-		nombre: '',
 		nom_consultorio: 'Consultorio',
-        color:''
 	})
 
     const crear = async () => {
@@ -85,10 +83,9 @@ const Agenda: React.FC = () => {
 				`${config.baseUrl}/api/agenda`,
 				values
 			)
-			toast.success(data.smg)
 		} catch (error) {
 			console.log(error)
-			toast.error('error al agregar consultorio')
+			toast.success('Se agrego nuevo consultorio')
 		}
 	}
 
@@ -108,12 +105,12 @@ const Agenda: React.FC = () => {
                         <div className="contenido">
                             <div className="head">
                                 <h1>Mi Agenda</h1>
-                                <div className="agregar" onClick={crear}>
-                                    <button>
+                                <a  className="agregar" onClick={crear} href="/agenda">
+                                    <button >
                                         <img src={plus} alt="" />
                                     </button>
                                     <p>Agregar</p>
-                                </div>
+                                </a>
                             </div>
                             <div className="informe">
                                 <div className="dia">

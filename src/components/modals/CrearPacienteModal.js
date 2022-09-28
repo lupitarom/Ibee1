@@ -48,17 +48,28 @@ export const CrearPacienteModal = ({ setShowModal }) => {
 	const [values, setValues] = useState({
 		//foto: paciente.url,
 		nombre: '',
-		ap_materno: '',
 		ap_paterno: '',
+		ap_materno: '',
+		telefono:'',
+		whatsapp:'',
 		edad: '',
-		rfc: '',
-		telefono: '',
 		estado: '',
 		ciudad: '',
 		colonia: '',
 		calle: '',
 		numero: '',
 		cp: '',
+		regimen_fiscal:'',
+		nif:'',
+		rfc: '',
+		razon_social:'',
+		correo:'',
+		estado2: '',
+		ciudad2: '',
+		colonia2: '',
+		calle2: '',
+		numero2: '',
+		cp2: '',
 	})
 
 	const [imagenPreview, setImagenPreview] = useState(userImage)
@@ -82,7 +93,7 @@ export const CrearPacienteModal = ({ setShowModal }) => {
 			toast.success('paciente creado  correctamente')
 		} catch (error) {
 			console.log(error)
-			toast.error('error actualizando paciente')
+			toast.error('error al agregar paciente')
 		}
 	}
 
@@ -150,10 +161,10 @@ export const CrearPacienteModal = ({ setShowModal }) => {
 					placeholder="Telefono fijo" />
                     <input 
 					type="text"
-					name='whatsApp'
-					value={values.whatsApp}
+					name='whatsapp'
+					value={values.whatsapp}
 					onChange={handleChanges}
-					placeholder="WhatsApp" />
+					placeholder="Whatsapp" />
 					<input 
 					type="text"
 					name='edad'
@@ -161,91 +172,6 @@ export const CrearPacienteModal = ({ setShowModal }) => {
 					onChange={handleChanges}
 					placeholder="Edad" />
                     </div>
-					<div className='a'>
-                    <select
-							name="estado1"
-							value={values.estado1}
-							onChange={handleChanges}
-						>
-							{estadosDeMexico.map((estado) => (
-								<option value={estado}>{estado}</option>
-							))}
-						</select>
-					<input 
-					type="text"
-					name='ciudad1'
-					value={values.ciudad1}
-					onChange={handleChanges}
-					placeholder="ciudad" />
-                    </div>
-					<div className='a'>
-                    <input 
-					type="text"
-					name='colonia1'
-					value={values.colonia1}
-					onChange={handleChanges}
-					placeholder="Colonia" />
-					<input 
-					type="text"
-					name='calle1'
-					value={values.calle1}
-					onChange={handleChanges}
-					placeholder="Calle" />
-                    </div>
-					<div className='a'>
-                    <input 
-					type="text"
-					name='numero1'
-					value={values.numero1}
-					onChange={handleChanges}
-					placeholder="Número" />
-					<input 
-					type="text"
-					name='cp1'
-					value={values.cp1}
-					onChange={handleChanges}
-					placeholder="CP" />
-                    </div>
-					<div>
-					<div className='datos'><label>DATOS FISCALES</label></div>
-					<div className='b'>
-					<input 
-					type="text"
-					name='regimen'
-					value={values.regimen}
-					onChange={handleChanges}
-					placeholder="Regimen fiscal" />
-					</div>
-					<div className='b'>
-					<input 
-					type="text"
-					name='NIF'
-					value={values.nif}
-					onChange={handleChanges}
-					placeholder="NIF" />
-					</div>
-					<div className='a'>
-					<input 
-					type="text"
-					name='rfc'
-					value={values.rfc}
-					onChange={handleChanges}
-					placeholder="RFC" />
-                    <input 
-					type="text"
-					name='razon'
-					value={values.razon}
-					onChange={handleChanges}
-					placeholder="Razon social" />
-					</div>
-					<div className='b'>
-					<input 
-					type="text"
-					name='correo'
-					value={values.correo}
-					onChange={handleChanges}
-					placeholder="Correo electronico" />
-					</div>
 					<div className='a'>
                     <select
 							name="estado"
@@ -259,7 +185,7 @@ export const CrearPacienteModal = ({ setShowModal }) => {
 					<input 
 					type="text"
 					name='ciudad'
-					value={values.ciudad}
+					value={values.ciudad1}
 					onChange={handleChanges}
 					placeholder="ciudad" />
                     </div>
@@ -288,6 +214,91 @@ export const CrearPacienteModal = ({ setShowModal }) => {
 					type="text"
 					name='cp'
 					value={values.cp}
+					onChange={handleChanges}
+					placeholder="CP" />
+                    </div>
+					<div>
+					<div className='datos'><label>DATOS FISCALES</label></div>
+					<div className='b'>
+					<input 
+					type="text"
+					name='regimen_fiscal'
+					value={values.regimen_fiscal}
+					onChange={handleChanges}
+					placeholder="Regimen fiscal" />
+					</div>
+					<div className='b'>
+					<input 
+					type="text"
+					name='nif'
+					value={values.nif}
+					onChange={handleChanges}
+					placeholder="NIF" />
+					</div>
+					<div className='a'>
+					<input 
+					type="text"
+					name='rfc'
+					value={values.rfc}
+					onChange={handleChanges}
+					placeholder="RFC" />
+                    <input 
+					type="text"
+					name='razon_social'
+					value={values.razon_social}
+					onChange={handleChanges}
+					placeholder="Razon social" />
+					</div>
+					<div className='b'>
+					<input 
+					type="text"
+					name='correo'
+					value={values.correo}
+					onChange={handleChanges}
+					placeholder="Correo electronico" />
+					</div>
+					<div className='a'>
+                    <select
+							name="estado2"
+							value={values.estado2}
+							onChange={handleChanges}
+						>
+							{estadosDeMexico.map((estado2) => (
+								<option value={estado2}>{estado2}</option>
+							))}
+						</select>
+					<input 
+					type="text"
+					name='ciudad2'
+					value={values.ciudad2}
+					onChange={handleChanges}
+					placeholder="ciudad" />
+                    </div>
+					<div className='a'>
+                    <input 
+					type="text"
+					name='colonia2'
+					value={values.colonia2}
+					onChange={handleChanges}
+					placeholder="Colonia" />
+					<input 
+					type="text"
+					name='calle2'
+					value={values.calle2}
+					onChange={handleChanges}
+					placeholder="Calle" />
+                    </div>
+					<div className='a'>
+                    <input 
+					type="text"
+					name='numero2'
+					value={values.numero2}
+					onChange={handleChanges}
+					placeholder="Número" />
+					<input 
+					type="text"
+					name='cp2'
+					value={values.cp2}
 					onChange={handleChanges}
 					placeholder="CP" />
                     </div>

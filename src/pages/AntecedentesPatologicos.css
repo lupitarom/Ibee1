@@ -35,11 +35,10 @@
     align-items: center;
 }
 .contenedorAntecedentesP form .limpiar button{
-    width: 1.2rem;
-    height: 1.2rem;
+    width: 1rem;
+    height: 1rem;
     margin-right: 5px;
-    font-size: .9rem;
-    display: flex;
+    font-size: x-small;
     border-radius: 100px;
     color: white;
     background-color: var(--negroOpaco);
