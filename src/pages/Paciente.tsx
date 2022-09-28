@@ -12,6 +12,7 @@ import iconEstudios from '../assets/img/Odontograma de evoluciónsvg.svg'
 import iconPersonal from '../assets/img/pacientes.svg'
 import iconArrow from './../assets/img/arrow-derecha.png'
 import historia from './../assets/img/historial.svg'
+import edit from './../assets/img/editar.svg'
 import { config } from '../env'
 import toast from 'react-hot-toast';
 import axios from 'axios';
@@ -38,10 +39,6 @@ const Paciente: React.FC = () => {
             console.log({ error });
             toast.error('error obteniendo paciente')
         }
-    }
-
-    if (paciente === {}) {
-        return <h1>el paciente no existe</h1>
     }
 
     return (

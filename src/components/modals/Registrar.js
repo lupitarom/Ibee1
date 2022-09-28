@@ -35,13 +35,19 @@ const takePicture = async () => {
 		console.log(error)
 	}
 }
-
+const limpiarCampo = (e) => {
+	e.preventDefault();
+	setValues({
+		...values,
+		[e.target.name]: ''
+	})
+}
 
 
 	
     return (
 		<>
-		<button className="boton-x" onClick={() => setShowModal(false)}>x</button>
+		<button className="boton-x1" onClick={() => setShowModal(false)}>x</button>
         
 		<div className='conWrap'>
 
@@ -68,7 +74,7 @@ const takePicture = async () => {
 					name='nombre'
 					value={values.nombre}
 					onChange={handleChanges}
-					placeholder="Nombre (s)" />   
+					placeholder="Nombre (s)" /> 
                     </div>
                     <div className='b'>
                     <input 
@@ -76,7 +82,7 @@ const takePicture = async () => {
 					name='ap_paterno'
 					value={values.ap_paterno}
 					onChange={handleChanges}
-					placeholder="Apellidos" />
+					placeholder="Apellido paterno" />
                     </div>
 					<div className='b'>
 					<input 
@@ -84,7 +90,15 @@ const takePicture = async () => {
 					name='ap_materno'
 					value={values.ap_materno}
 					onChange={handleChanges}
-					placeholder="correo electronico" />   
+					placeholder="Apellido materno" />
+                    </div>
+					<div className='b'>
+					<input 
+					type="text"
+					name='correo'
+					value={values.correo}
+					onChange={handleChanges}
+					placeholder="Correo electronico" />
                     </div>
                     <div className='b'>
                     <input 
@@ -93,7 +107,6 @@ const takePicture = async () => {
 					value={values.user}
 					onChange={handleChanges}
 					placeholder="Usuario" />
-					
                     </div>
 					<div className='b'>
                     <input 
@@ -102,7 +115,6 @@ const takePicture = async () => {
 					value={values.password}
 					onChange={handleChanges}
 					placeholder="Contraseña" />
-					
                     </div>
                     <button className='btn'>Crear</button>
 			</form>
