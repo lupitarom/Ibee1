@@ -23,8 +23,10 @@ const Paciente: React.FC = () => {
 
     const params: any = useParams()
     let pacienteInicio: any = null
+    let dfInicio: any = null
     const [paciente, setPaciente] = useState(pacienteInicio)
     const [showModal, setShowModal] = useState(false)
+    const [df,setdf]=useState()
 
     useEffect(() => {
         buscarPaciente()
@@ -41,6 +43,10 @@ const Paciente: React.FC = () => {
         }
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> de9365bf7023c82a238b497cd3abc2c00105fca9
     return (
         <IonPage>
             <IonContent fullscreen>
@@ -55,6 +61,7 @@ const Paciente: React.FC = () => {
                         }}>
                             <EditarPacienteModal 
                                 paciente={ paciente }
+                                df={df}
                                 setPaciente={ setPaciente }
                                 setShowModal={ setShowModal }
                             />

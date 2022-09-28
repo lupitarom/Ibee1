@@ -48,17 +48,28 @@ export const CrearPacienteModal = ({ setShowModal }) => {
 	const [values, setValues] = useState({
 		//foto: paciente.url,
 		nombre: '',
-		ap_materno: '',
 		ap_paterno: '',
+		ap_materno: '',
+		telefono:'',
+		whatsapp:'',
 		edad: '',
-		rfc: '',
-		telefono: '',
 		estado: '',
 		ciudad: '',
 		colonia: '',
 		calle: '',
 		numero: '',
 		cp: '',
+		regimen_fiscal:'',
+		nif:'',
+		rfc: '',
+		razon_social:'',
+		correo:'',
+		estado2: '',
+		ciudad2: '',
+		colonia2: '',
+		calle2: '',
+		numero2: '',
+		cp2: '',
 	})
 
 	const [imagenPreview, setImagenPreview] = useState(userImage)
@@ -82,9 +93,10 @@ export const CrearPacienteModal = ({ setShowModal }) => {
 			toast.success('paciente creado  correctamente')
 		} catch (error) {
 			console.log(error)
-			toast.error('error actualizando paciente')
+			toast.error('error al agregar paciente')
 		}
 	}
+
 	const takePicture = async () => {
 		try {
 			const image = await Camera.getPhoto({
@@ -98,13 +110,7 @@ export const CrearPacienteModal = ({ setShowModal }) => {
 			console.log(error)
 		}
 	}
-	const limpiarCampo = (e) => {
-        e.preventDefault();
-        setValues({
-            ...values,
-            [e.target.name]: ''
-        })
-	}
+
 	return (
 		<>
 			
@@ -129,10 +135,6 @@ export const CrearPacienteModal = ({ setShowModal }) => {
 					value={values.nombre}
 					onChange={handleChanges}
 					placeholder="Nombre" />
-					<button  className='borrar'
-					 name="nombre"
-					 onClick={limpiarCampo}
-					>x</button>
 					</div>
 					<div className='b'>
                     <input 
@@ -141,10 +143,6 @@ export const CrearPacienteModal = ({ setShowModal }) => {
 					value={values.ap_paterno}
 					onChange={handleChanges}
 					placeholder="Apellido Paterno" />
-					<button className='borrar'
-					 name="ap_paterno"
-					 onClick={limpiarCampo}
-					>x</button>
                     </div>
 					<div className='b'>
                     <input 
@@ -153,10 +151,6 @@ export const CrearPacienteModal = ({ setShowModal }) => {
 					value={values.ap_materno}
 					onChange={handleChanges}
 					placeholder="Apellido Materno" />
-					<button className='borrar'
-					name="ap_materno"
-					onClick={limpiarCampo}
-					>x</button>
 					</div>
 					<div className='a'>
 					<input 
@@ -167,10 +161,10 @@ export const CrearPacienteModal = ({ setShowModal }) => {
 					placeholder="Telefono fijo" />
                     <input 
 					type="text"
-					name='whatsApp'
-					value={values.whatsApp}
+					name='whatsapp'
+					value={values.whatsapp}
 					onChange={handleChanges}
-					placeholder="WhatsApp" />
+					placeholder="Whatsapp" />
 					<input 
 					type="text"
 					name='edad'
@@ -191,7 +185,7 @@ export const CrearPacienteModal = ({ setShowModal }) => {
 					<input 
 					type="text"
 					name='ciudad'
-					value={values.ciudad}
+					value={values.ciudad1}
 					onChange={handleChanges}
 					placeholder="ciudad" />
                     </div>
@@ -232,10 +226,6 @@ export const CrearPacienteModal = ({ setShowModal }) => {
 					value={values.regimen_fiscal}
 					onChange={handleChanges}
 					placeholder="Regimen fiscal" />
-					<button className='borrar'
-					name="regimen"
-					onClick={limpiarCampo}
-					>x</button>
 					</div>
 					<div className='b'>
 					<input 
@@ -244,10 +234,6 @@ export const CrearPacienteModal = ({ setShowModal }) => {
 					value={values.nif}
 					onChange={handleChanges}
 					placeholder="NIF" />
-					<button className='borrar'
-					name="nif"
-					onClick={limpiarCampo}
-					>x</button>
 					</div>
 					<div className='a'>
 					<input 
@@ -270,10 +256,6 @@ export const CrearPacienteModal = ({ setShowModal }) => {
 					value={values.correo}
 					onChange={handleChanges}
 					placeholder="Correo electronico" />
-					<button className='borrar'
-					name="correo"
-					onClick={limpiarCampo}
-					>x</button>
 					</div>
 					<div className='a'>
                     <select

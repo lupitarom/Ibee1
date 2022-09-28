@@ -48,6 +48,9 @@ export const FichaIndentificacion = () => {
             [e.target.name]: e.target.value
         })
     }
+
+
+
     const limpiarCampo = (e: any) => {
         e.preventDefault();
         setValues({
@@ -62,7 +65,7 @@ export const FichaIndentificacion = () => {
                 <form className="nombre">
                     <label htmlFor="">Nombre:</label>
                     <div className="limpiar">
-                        <input 
+                        <input
                             className="obligatorio" 
                             type="text" 
                             name= "nombre"
@@ -75,7 +78,7 @@ export const FichaIndentificacion = () => {
                     </div>
                     <div className="limpiar">
                     <input className="obligatorio" type="text" placeholder="Apellido Paterno*" />
-                        <button>x</button>
+                        <button >x</button>
                     </div>
                     <div className="limpiar">
                     <input className="obligatorio" type="text" placeholder="Apellido Materno*" />
