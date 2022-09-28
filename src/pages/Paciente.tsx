@@ -22,8 +22,10 @@ const Paciente: React.FC = () => {
 
     const params: any = useParams()
     let pacienteInicio: any = null
+    let dfInicio: any = null
     const [paciente, setPaciente] = useState(pacienteInicio)
     const [showModal, setShowModal] = useState(false)
+    const [df,setdf]=useState()
 
     useEffect(() => {
         buscarPaciente()
@@ -55,6 +57,7 @@ const Paciente: React.FC = () => {
                         }}>
                             <EditarPacienteModal 
                                 paciente={ paciente }
+                                df={df}
                                 setPaciente={ setPaciente }
                                 setShowModal={ setShowModal }
                             />

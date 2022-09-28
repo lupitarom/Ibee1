@@ -10,7 +10,7 @@ const estadosDeMexico = ['Aguascalientes','Baja California','Baja California Sur
 	'Guerrero','Hidalgo','Jalisco','Estado de Mexico','Michoacan de Ocampo','Morelos','Nayarit','Nuevo Leon','Oaxaca','Puebla','Queretaro de Arteaga','Quintana Roo','San Luis Potosi',
 	'Sinaloa','Sonora','Tabasco','Tamaulipas','Tlaxcala','Veracruz de Ignacio de la Llave','Yucatan','Zacatecas',]
 
-export const EditarPacienteModal = ({ paciente, setPaciente, setShowModal }) => {
+export const EditarPacienteModal = ({ paciente, df, setPaciente, setShowModal }) => {
 	const [values, setValues] = useState({
 		foto: paciente.url,
 		nombre: paciente.nombre,
@@ -19,25 +19,24 @@ export const EditarPacienteModal = ({ paciente, setPaciente, setShowModal }) => 
 		rfc: paciente.rfc,
 		telefono: paciente.telefono?.telefono, // TODO
 		whatsapp: paciente.telefono?.whatsapp,
-		edad: paciente.edad,
+		edad: paciente.edad	,
 		estado: paciente.estado,
 		ciudad: paciente.ciudad,
 		colonia: paciente.colonia,
 		calle: paciente.calle,
 		numero: paciente.numero,
 		cp: paciente.cp,
-		regimen_fiscal: paciente.regimen_fiscal,
-		nif:paciente.nif,
-		razon_social:paciente.razon_social,
+		regimen_fiscal: paciente.df?.regimen_fiscal,
+		nif:paciente.df?.nif,
+		razon_social:paciente.df?.razon_social,
 		correo:paciente.correo,
-		estado2: paciente.estado2,
-		ciudad2: paciente.ciudad2,
-		colonia2: paciente.colonia2,
-		calle2: paciente.calle2,
-		numero2: paciente.numero2,
-		cp2: paciente.cp2,
+		estado2: paciente.df?.estado2,
+		ciudad2: paciente.df?.ciudad2,
+		colonia2: paciente.df?.colonia2,
+		calle2: paciente.df?.calle2,
+		numero2: paciente.df?.numero2,
+		cp2: paciente.df?.cp2,
 	})
-
 	const [imagenPreview, setImagenPreview] = useState(
 		`${config.baseUrlImagenes}/${paciente.url}`
 	)
@@ -55,6 +54,7 @@ export const EditarPacienteModal = ({ paciente, setPaciente, setShowModal }) => 
             await axios.put(`${config.baseUrl}/api/paciente/${paciente.id_paciente}`, values)
             setPaciente({
                 ...paciente,
+				...df,
                 ...values,
                 telefono: {...paciente.telefono,telefono:values.telefono}
             })
@@ -89,6 +89,7 @@ export const EditarPacienteModal = ({ paciente, setPaciente, setShowModal }) => 
 
 	return (
 		<>
+
 		<button className="boton-x" onClick={() => setShowModal(false)}>x</button>
 			<h1>Editar paciente</h1>
 			<div className="imagen-preview-container">
@@ -151,7 +152,7 @@ export const EditarPacienteModal = ({ paciente, setPaciente, setShowModal }) => 
 					<input
 						type="text"
 						name="whatsapp"
-						value={values.whatsApp}
+						value={values.whatsapp}
 						placeholder='whatsApp'
 						onChange={handleChanges}
 					/>
@@ -225,7 +226,7 @@ export const EditarPacienteModal = ({ paciente, setPaciente, setShowModal }) => 
 					<input 
 					type="text"
 					name='regimen_fiscal'
-					value={values._fiscal}
+					value={values.regimen_fiscal}
 					onChange={handleChanges}
 					placeholder="Regimen fiscal" />
 					<button className='borrar'
@@ -331,6 +332,7 @@ export const EditarPacienteModal = ({ paciente, setPaciente, setShowModal }) => 
 					</div>
 				<IonButton onClick={actualizar}>actualizar</IonButton>
 			</form>
+
 		</>
 	)
 }

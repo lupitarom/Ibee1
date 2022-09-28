@@ -80,7 +80,7 @@ const Agenda: React.FC = () => {
 
 		try {
 			const {data} = await axios.post(
-				`${config.baseUrl}/api/paciente`,
+				`${config.baseUrl}/api/agenda`,
 				values
 			)
 		} catch (error) {

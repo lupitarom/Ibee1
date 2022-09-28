@@ -96,6 +96,7 @@ export const CrearPacienteModal = ({ setShowModal }) => {
 			toast.error('error al agregar paciente')
 		}
 	}
+
 	const takePicture = async () => {
 		try {
 			const image = await Camera.getPhoto({
@@ -109,13 +110,7 @@ export const CrearPacienteModal = ({ setShowModal }) => {
 			console.log(error)
 		}
 	}
-	const limpiarCampo = (e) => {
-        e.preventDefault();
-        setValues({
-            ...values,
-            [e.target.name]: ''
-        })
-	}
+
 	return (
 		<>
 			
@@ -140,10 +135,6 @@ export const CrearPacienteModal = ({ setShowModal }) => {
 					value={values.nombre}
 					onChange={handleChanges}
 					placeholder="Nombre" />
-					<button  className='borrar'
-					 name="nombre"
-					 onClick={limpiarCampo}
-					>x</button>
 					</div>
 					<div className='b'>
                     <input 
@@ -152,10 +143,6 @@ export const CrearPacienteModal = ({ setShowModal }) => {
 					value={values.ap_paterno}
 					onChange={handleChanges}
 					placeholder="Apellido Paterno" />
-					<button className='borrar'
-					 name="ap_paterno"
-					 onClick={limpiarCampo}
-					>x</button>
                     </div>
 					<div className='b'>
                     <input 
@@ -164,10 +151,6 @@ export const CrearPacienteModal = ({ setShowModal }) => {
 					value={values.ap_materno}
 					onChange={handleChanges}
 					placeholder="Apellido Materno" />
-					<button className='borrar'
-					name="ap_materno"
-					onClick={limpiarCampo}
-					>x</button>
 					</div>
 					<div className='a'>
 					<input 
@@ -243,13 +226,6 @@ export const CrearPacienteModal = ({ setShowModal }) => {
 					value={values.regimen_fiscal}
 					onChange={handleChanges}
 					placeholder="Regimen fiscal" />
-<<<<<<< HEAD
-=======
-					<button className='borrar'
-					name="regimen"
-					onClick={limpiarCampo}
-					>x</button>
->>>>>>> 69e7193e0506f8f230c69f4b38274caaa17eb56b
 					</div>
 					<div className='b'>
 					<input 
@@ -258,13 +234,6 @@ export const CrearPacienteModal = ({ setShowModal }) => {
 					value={values.nif}
 					onChange={handleChanges}
 					placeholder="NIF" />
-<<<<<<< HEAD
-=======
-					<button className='borrar'
-					name="nif"
-					onClick={limpiarCampo}
-					>x</button>
->>>>>>> 69e7193e0506f8f230c69f4b38274caaa17eb56b
 					</div>
 					<div className='a'>
 					<input 
@@ -287,13 +256,6 @@ export const CrearPacienteModal = ({ setShowModal }) => {
 					value={values.correo}
 					onChange={handleChanges}
 					placeholder="Correo electronico" />
-<<<<<<< HEAD
-=======
-					<button className='borrar'
-					name="correo"
-					onClick={limpiarCampo}
-					>x</button>
->>>>>>> 69e7193e0506f8f230c69f4b38274caaa17eb56b
 					</div>
 					<div className='a'>
                     <select

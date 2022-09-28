@@ -48,10 +48,9 @@ export const FichaIndentificacion = () => {
             [e.target.name]: e.target.value
         })
     }
-<<<<<<< HEAD
 
 
-=======
+
     const limpiarCampo = (e: any) => {
         e.preventDefault();
         setValues({
@@ -59,7 +58,6 @@ export const FichaIndentificacion = () => {
             [e.target.name]: ''
         })
 	}
->>>>>>> 69e7193e0506f8f230c69f4b38274caaa17eb56b
     return (
         <>
             <div className="contenedorFicha">
