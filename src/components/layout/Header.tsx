@@ -8,6 +8,8 @@ import imgMas from '../../assets/img/más.svg'
 import { useLocation } from 'react-router'
 import '../layout/Header.css'
 import {TriangleDownIcon} from '@primer/octicons-react';
+
+
 export const Header = () => {
 
 
@@ -19,7 +21,7 @@ export const Header = () => {
         localStorage.removeItem('user')
         window.location.reload()
     }
-    
+   
     return (
         <div className="headerPacientes">
             <a href="/Agenda" className="centro">
@@ -41,8 +43,8 @@ export const Header = () => {
                     </div>
                 </a>
             </div>
-            
             <div className="usuario">
+           
             <ul className='nav'>
 
                 <li className='trianguloU'> <a><TriangleDownIcon size={25} /></a>

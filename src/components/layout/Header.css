@@ -9,10 +9,7 @@
     padding: 0px 21px;
     display: flex;
     justify-content: center;
-
   }
-
-
   .nav li a:hover{
     background-color: var(--azulClaro);
   }
@@ -27,4 +24,5 @@
   .nav li:hover >ul{
     display: block;
     right: .5px;
+    color: black;
   }

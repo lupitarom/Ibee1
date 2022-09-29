@@ -43,10 +43,6 @@ const Paciente: React.FC = () => {
         }
     }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> de9365bf7023c82a238b497cd3abc2c00105fca9
     return (
         <IonPage>
             <IonContent fullscreen>
