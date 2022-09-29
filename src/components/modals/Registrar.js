@@ -100,22 +100,15 @@ const limpiarCampo = (e) => {
 					onChange={handleChanges}
 					placeholder="Correo electronico" />
                     </div>
-                    <div className='b'>
-                    <input 
-					type="text"
-					name='user'
-					value={values.user}
-					onChange={handleChanges}
-					placeholder="Usuario" />
-                    </div>
-					<div className='b'>
+                    
+					
                     <input 
 					type="text"
 					name='password'
 					value={values.password}
 					onChange={handleChanges}
 					placeholder="Contraseña" />
-                    </div>
+                   
                     <button className='btn'>Crear</button>
 			</form>
 			</div>
