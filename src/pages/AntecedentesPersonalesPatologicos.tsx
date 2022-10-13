@@ -3,7 +3,8 @@ import React from 'react'
 import { Layout } from '../components/layout/Layout';
 import "./AntecedentesPersonalesPatologicos.css"
 import { useEffect, useState } from 'react';
-
+import {ArrowLeftIcon} from '@primer/octicons-react';
+import { useParams } from 'react-router';
 export const AntecedentesPersonalesPatologicos = () => {
 
     const [mostrar, setmostrar] = useState({
@@ -13,7 +14,7 @@ export const AntecedentesPersonalesPatologicos = () => {
         neoplasticas: false,
         neoplasticas2: false
     });
-
+    const params: any = useParams()
     const initialValues = {
         enfermedades_IeINT: '',
         enfermedadesTS: '',
@@ -22,7 +23,7 @@ export const AntecedentesPersonalesPatologicos = () => {
         enf_congenitas: '',
         otras: ''
     }
-    
+    const pacienteId  = params.pacienteId 
     const [values, setValues] = useState( initialValues )
 
     const maneSubmit = (e: any) => {
@@ -39,6 +40,7 @@ export const AntecedentesPersonalesPatologicos = () => {
 
     return (
         <>
+        <a href={`/HistoriaClinica/${pacienteId}`} ><ArrowLeftIcon size={30} /></a>
             <div className="contenedorAntecedentesPersonalesP">
                 <h1>Antecedentes Personales Patologicos</h1>
                 <form onSubmit={

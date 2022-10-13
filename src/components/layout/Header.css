@@ -2,16 +2,24 @@
   ul, li{
     list-style: none;
   }
+
+ .conNav{
+  padding: 0px;
+  z-index: 300;
+  border-radius: 7px;
+  padding-top: 15px;
+  padding-right: 15px;
+ }
   .nav li a{
     background-color: transparent;
     color: rgb(255, 255, 255);
     text-decoration: none;
-    padding: 0px 21px;
+    margin-left: 27px;
     display: flex;
     justify-content: center;
   }
   .nav li a:hover{
-    background-color: var(--azulClaro);
+    background-color:var(--azulMedio);
   }
   .nav > li{
     right: 100px;
@@ -20,9 +28,9 @@
     display: none;
     position: absolute;
     min-height: 140px;
+    background: linear-gradient(45deg,var(--azulFuerte),var(--azulClaro) 360%);
   }
   .nav li:hover >ul{
     display: block;
-    right: .5px;
-    color: black;
+    right: -28px;
   }
