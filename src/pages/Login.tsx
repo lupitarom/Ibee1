@@ -105,7 +105,7 @@ const Login: React.FC = () => {
               <input  
                 type="text" 
                 id="user" 
-                placeholder="Usuario"
+                placeholder="Correo electrónico"
                 name="user"
                 value={ values.user } 
                 onChange={handleChange} 
@@ -124,14 +124,7 @@ const Login: React.FC = () => {
               <div><p >¿No tienes una cuenta? <a onClick={ ()=> setShowModal(true) }>Registrate</a></p></div>
             </form>
 
-
-            <IonToast
-              isOpen={showToast}
-              onDidDismiss={() => setShowToast(false)}
-              message="usuario y/o contraseña incorrectos"
-              duration={1000}
-            />
-
+            
           </div>
         </div>
       }

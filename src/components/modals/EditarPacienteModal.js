@@ -29,7 +29,7 @@ export const EditarPacienteModal = ({ paciente, df, setPaciente, setShowModal })
 		regimen_fiscal: paciente.df?.regimen_fiscal,
 		nif:paciente.df?.nif,
 		razon_social:paciente.df?.razon_social,
-		correo:paciente.correo,
+		correo:paciente.df?.correo,
 		estado2: paciente.df?.estado2,
 		ciudad2: paciente.df?.ciudad2,
 		colonia2: paciente.df?.colonia2,

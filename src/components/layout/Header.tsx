@@ -7,7 +7,10 @@ import imgHistoria from '../../assets/img/historial.svg'
 import imgMas from '../../assets/img/más.svg'
 import { useLocation } from 'react-router'
 import '../layout/Header.css'
-import {TriangleDownIcon} from '@primer/octicons-react';
+import {TriangleDownIcon, SignOutIcon, GearIcon} from '@primer/octicons-react';
+import { IonAvatar } from '@ionic/react'
+
+
 export const Header = () => {
 
 
@@ -19,7 +22,7 @@ export const Header = () => {
         localStorage.removeItem('user')
         window.location.reload()
     }
-    
+   
     return (
         <div className="headerPacientes">
             <a href="/Agenda" className="centro">
@@ -41,14 +44,17 @@ export const Header = () => {
                     </div>
                 </a>
             </div>
-            
             <div className="usuario">
+           
             <ul className='nav'>
 
                 <li className='trianguloU'> <a><TriangleDownIcon size={25} /></a>
 
-                <ul>
-                    < li className='cerrarSesion'><a href='/Login'>Cerrar Sesión</a></li>
+                <ul className='conNav'>
+                
+                    < li><p><a href='/Login'> <SignOutIcon size={16} />Cerrar Sesión</a></p></li>
+
+                    < li><a href='/Login'> <GearIcon size={16} />Configuración</a></li>
                 </ul>
                 </li>
                 

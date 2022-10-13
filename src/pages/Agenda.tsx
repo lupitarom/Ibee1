@@ -74,6 +74,7 @@ const Agenda: React.FC = () => {
 
     const [values] = useState({
 		nom_consultorio: 'Consultorio',
+        
 	})
 
     const crear = async () => {
