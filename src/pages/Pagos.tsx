@@ -8,7 +8,7 @@ import { useParams } from 'react-router'
 import { HistorialPagos } from '../components/pagos/HistorialPagos'
 import axios from 'axios'
 import { IonButton, IonCol, IonGrid, IonInput, IonItem, IonItemDivider, IonList, IonModal, IonRow } from '@ionic/react'
-
+import {ArrowLeftIcon} from '@primer/octicons-react';
 export const Pagos = () => {
 
     const [paciente, setPaciente] = useState<any>({
@@ -37,7 +37,7 @@ export const Pagos = () => {
         getPaciente()
         getHistorialPagos()
     }, [])
-
+    const pacienteId  = params.pacienteId
     const getPaciente = async () => {
         try {
             const res = await fetch(`${config.baseUrl}/api/pacienteParaPago/${params.pacienteId}`)
@@ -73,7 +73,7 @@ export const Pagos = () => {
 
     return (
         <Layout>
-
+            <a href={`/Paciente/${pacienteId}`} ><ArrowLeftIcon size={30} /></a>
             <div className="contenedorPagos">
                 <div className="infoPersonal">
                     <div className="imagen">

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router';
 import { config } from '../env';
 import "./FichaIdentificacion.css";
+import {ArrowLeftIcon} from '@primer/octicons-react';
 
 export const FichaIndentificacion = () => {
 
@@ -41,6 +42,7 @@ export const FichaIndentificacion = () => {
         console.log( data.results[0] );
         setValues({...data.results[0]})
     }
+    const pacienteId  = params.pacienteId 
 
     const handleChange = (e:any) =>{
         setValues({
@@ -60,6 +62,7 @@ export const FichaIndentificacion = () => {
 	}
     return (
         <>
+            <a href={`/HistoriaClinica/${pacienteId}`} ><ArrowLeftIcon size={30} /></a>
             <div className="contenedorFicha">
                 <h1>Ficha de identificación</h1>
                 <form className="nombre">
