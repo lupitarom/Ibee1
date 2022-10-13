@@ -1,18 +1,28 @@
 import './registrar.css'
+import { size } from 'lodash'
 import { IonButton } from '@ionic/react'
 import React, { useState } from 'react'
 import toast from 'react-hot-toast'
 import { config } from '../../env'
+import axios from 'axios';
 import userImage from '../../assets/img/woman-gfec6923be_640.jpg'
 import { Camera, CameraResultType } from '@capacitor/camera'
 import {DeviceCameraIcon} from '@primer/octicons-react';
-
+import { validateEmail } from '../../utils/helpers'
 
 
 export const Registrar=({setShowModal})=>{
+const[errorEmail, setErrorEmail]=useState("")
+const[errorPassword, setErrorPassword]=useState("")
+const[errorConfirm, setErrorConfirm]=useState("")
+
 const[values,setValues]=useState({
-    usuario: '',
-    password: ''
+    nombre: '',
+	ap_paterno:'',
+	ap_materno:'',
+	correo: '',
+    password: '',
+	confirm: ''
 })
 const [imagenPrevia, setImagenPrevia] = useState(userImage)
 
@@ -44,6 +54,35 @@ const limpiarCampo = (e) => {
 }
 
 
+
+const crear = async () => {
+	console.log(values)
+	if(!validateEmail(values.correo)){
+		toast.error('Ingresa un correo valido')
+	}
+	
+	else if(size(values.password) < 6 ){
+		toast.error("Ingresa una contraseña de almenos 6 caracteres")
+	}
+
+	else if(values.password !== values.confirm){
+		toast.error("Las contraseñas no coinsiden")
+	}
+
+	else{
+	try {
+		const { data } = await axios.post(
+			`${config.baseUrl}/api/registrar`,
+			values
+		)
+		setShowModal(false)
+		toast.success('usuario creado  correctamente')
+	} catch (error) {
+		console.log(error)
+		toast.error('error al crear usuario')
+	}}
+}
+
 	
     return (
 		<>
@@ -74,7 +113,7 @@ const limpiarCampo = (e) => {
 					name='nombre'
 					value={values.nombre}
 					onChange={handleChanges}
-					placeholder="Nombre (s)" /> 
+					placeholder="Nombre (s)"  /> 
                     </div>
                     <div className='b'>
                     <input 
@@ -96,20 +135,28 @@ const limpiarCampo = (e) => {
 					<input 
 					type="text"
 					name='correo'
-					value={values.correo}
+					defaultValue={values.correo}
 					onChange={handleChanges}
 					placeholder="Correo electronico" />
                     </div>
                     
-					
                     <input 
-					type="text"
+					type="password"
 					name='password'
-					value={values.password}
+					defaultValue={values.password}
 					onChange={handleChanges}
-					placeholder="Contraseña" />
+					placeholder="Contraseña"
+					erroMessage={"errorPassword"} />
+
+ 					<input 
+					type="password"
+					name='confirm'
+					defaultValue={values.confirm}
+					onChange={handleChanges}
+					placeholder="Confirmar contraseña"
+					erroMessage={errorConfirm} />
                    
-                    <button className='btn'>Crear</button>
+                    <button type='button' onClick={crear} className='btn'>Crear</button>
 			</form>
 			</div>
       </>

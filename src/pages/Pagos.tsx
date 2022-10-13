@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Layout } from '../components/layout/Layout'
-import foto from './../assets/img/woman-gfec6923be_640.jpg'
+//import foto from './../assets/img/woman-gfec6923be_640.jpg'
 import './Pagos.css'
 import lupita from './../assets/img/Lupa.svg'
 import { config } from '../env'
